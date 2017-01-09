@@ -1,0 +1,1025 @@
+fileFormatVersion: 2
+guid: ec4231afa8002694a998db7627bfac86
+timeCreated: 1451449533
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm.L
+    100002: arm.R
+    100004: Blue_Bunny
+    100006: //RootNode
+    100008: BunnyRootBone
+    100010: BunnyRootBone_end
+    100012: Ear.L
+    100014: Ear.R
+    100016: Ear1.L
+    100018: Ear1.L_end
+    100020: Ear1.R
+    100022: Ear1.R_end
+    100024: EyeBone
+    100026: EyeBone_end
+    100028: foot.L
+    100030: foot.L_end
+    100032: foot.R
+    100034: foot.R_end
+    100036: forearm.L
+    100038: forearm.L_end
+    100040: forearm.R
+    100042: forearm.R_end
+    100044: Head
+    100046: leg.L
+    100048: leg.R
+    100050: Spine
+    100052: Spine1
+    100054: TailBone
+    100056: TailBone_end
+    100058: Z_Blue_Bunny_Skeleton
+    400000: arm.L
+    400002: arm.R
+    400004: Blue_Bunny
+    400006: //RootNode
+    400008: BunnyRootBone
+    400010: BunnyRootBone_end
+    400012: Ear.L
+    400014: Ear.R
+    400016: Ear1.L
+    400018: Ear1.L_end
+    400020: Ear1.R
+    400022: Ear1.R_end
+    400024: EyeBone
+    400026: EyeBone_end
+    400028: foot.L
+    400030: foot.L_end
+    400032: foot.R
+    400034: foot.R_end
+    400036: forearm.L
+    400038: forearm.L_end
+    400040: forearm.R
+    400042: forearm.R_end
+    400044: Head
+    400046: leg.L
+    400048: leg.R
+    400050: Spine
+    400052: Spine1
+    400054: TailBone
+    400056: TailBone_end
+    400058: Z_Blue_Bunny_Skeleton
+    4300000: Blue_Bunny
+    7400000: Z_Blue_Bunny_Skeleton|Bunny_Cry
+    7400002: Z_Blue_Bunny_Skeleton|Bunny_Fall
+    7400004: Z_Blue_Bunny_Skeleton|Bunny_Idle
+    7400006: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw
+    7400008: Z_Blue_Bunny_Skeleton|Bunny_Idle_Scratch
+    7400010: Z_Blue_Bunny_Skeleton|Bunny_JumpUp
+    7400012: Z_Blue_Bunny_Skeleton|Bunny_Land
+    7400014: Z_Blue_Bunny_Skeleton|Bunny_Running
+    7400016: Z_Blue_Bunny_Skeleton|Bunny_T-Pose
+    7400018: Z_Blue_Bunny_Skeleton|BunnyActivateClaw
+    7400020: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw0
+    9500000: //RootNode
+    13700000: Blue_Bunny
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Cry
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Cry
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Fall
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Fall
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Idle
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Idle
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Idle_Scratch
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Idle_Scratch
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw0
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Land
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Land
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_Running
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_Running
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|Bunny_T-Pose
+      takeName: Z_Blue_Bunny_Skeleton|Bunny_T-Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Z_Blue_Bunny_Skeleton|BunnyActivateClaw
+      takeName: Z_Blue_Bunny_Skeleton|BunnyActivateClaw
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Blue_Bunny
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/BunnyRootBone/BunnyRootBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.L/foot.L/foot.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/leg.R/foot.R/foot.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.L/Ear1.L/Ear1.L_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/Ear.R/Ear1.R/Ear1.R_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/Spine1/Head/EyeBone/EyeBone_end
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone
+        weight: 1
+      - path: Z_Blue_Bunny_Skeleton/Spine/TailBone/TailBone_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
