@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5e7356d17a9471e89d576bee81abd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatStrength: 1.22
+  floatStrength: 0.75
 --- !u!122 &560316029
 Halo:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &560316032
 MeshFilter:
@@ -665,7 +665,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1065861350
 MeshFilter:
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5e7356d17a9471e89d576bee81abd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatStrength: 1.22
+  floatStrength: 0.75
 --- !u!1 &1071493822
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,10 +741,10 @@ RectTransform:
   m_Father: {fileID: 1080837734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071493824
 MonoBehaviour:
@@ -2055,6 +2055,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b72d1c82d14423d9d2ba5b33d82911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
   top: 0
   side: 0

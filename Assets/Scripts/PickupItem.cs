@@ -90,7 +90,7 @@ public class PickupItem : MonoBehaviour {
 		msManager.TriggerEvent ("ResetScore");
 		ParticleSystem splat = GetComponent<ParticleSystem>();
 		splat.Play();
-		Destroy(gameObject, splat.duration);
+		Destroy(gameObject, splat.main.duration);
 	}
 
 	// Update is called once per frame
