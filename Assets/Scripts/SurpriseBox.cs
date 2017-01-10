@@ -6,7 +6,6 @@ public class SurpriseBox : MonoBehaviour {
 
 	public float move_time = 0.4f;
 	public float wait_time = 0.8f;
-//	public float probability = 0.3f;
 	public Animator SpawnedBox_a;
 	public Animation SpawnBox_anim;
 	public GameObject[] bombs_and_veggies;
@@ -16,22 +15,19 @@ public class SurpriseBox : MonoBehaviour {
 
 	public BoxSpawner m_spawner;
 
-	//public static GameObject spawned_box;
 	public GameObject spawned_item;
 
-//	private Button GoButton;
-	
-	void Start () 
+    // How long should the box wait in place before opening? (We'll choose a random
+    // number between these two values.)
+    private const float kMinPauseBeforeOpen = 0.1f;
+    private const float kMaxPauseBeforeOpen = 1.5f;
+
+    void Start () 
 	{ 
 		StartCoroutine ( BoxRoutine () );
-
-		//find the reset button
-	//	GoButton = (Button) FindObjectOfType(typeof(Button));
-
 	}
 
 
-	// Use this for initialization
 	IEnumerator BoxRoutine  () 
 	{
 		// find wait and end points
@@ -42,15 +38,19 @@ public class SurpriseBox : MonoBehaviour {
  		end_position = GameObject.Find("EndPoint").transform;
 		pickup_position = GameObject.Find("pickup_position").transform;
 
-
-		//move tward wait Point
+		//move toward wait point
 		movetoAction( middle_position, move_time );
 
-		//animate and reveal contents
-		//spawn an item from array
+		// wait until the box reaches the center of the screen
 		yield return new WaitForSeconds(move_time);
-		m_spawner.SpawnItem();
-		SpawnedBox_a.SetTrigger("openbox");
+
+        // Wait a random amount of time before opening the box
+        float waitTime = Random.Range(kMinPauseBeforeOpen, kMaxPauseBeforeOpen);
+        yield return new WaitForSeconds(waitTime);
+        
+        // open the box and spawn an item from the array
+        m_spawner.SpawnItem();
+        SpawnedBox_a.SetTrigger("openbox");
 
 		// pause to let you grab the item
 		yield return new WaitForSeconds(wait_time);
@@ -100,7 +100,6 @@ public class SurpriseBox : MonoBehaviour {
 	{
 		msManager.TriggerEvent( "DestroyBox" );
 		Destroy(this.gameObject, 0.8f);
- 
 	}
 	
 }
