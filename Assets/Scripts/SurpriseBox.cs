@@ -98,7 +98,7 @@ public class SurpriseBox : MonoBehaviour {
 
 	void CleanUp ()
 	{
-		//msManager.TriggerEvent( "SpawnBox" );
+		msManager.TriggerEvent( "DestroyBox" );
 		Destroy(this.gameObject, 0.8f);
  
 	}

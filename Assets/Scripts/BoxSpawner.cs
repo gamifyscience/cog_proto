@@ -43,15 +43,15 @@ public class BoxSpawner : MonoBehaviour {
 	public void SpawnBox()
 	{
         SpawnBoxRoutine();
-	}
+    }
+    public void Grab()
+    {
+    }
 
-	public void Grab()
-	{
-	}
 
 
-	// Clone a new surprise box
-	public void SpawnBoxRoutine () 
+    // Clone a new surprise box
+    public void SpawnBoxRoutine () 
 	{
 		
 		spawn_point = GameObject.Find("SpawnPoint").transform;
@@ -59,7 +59,7 @@ public class BoxSpawner : MonoBehaviour {
 		GameObject spawned_box = Instantiate 
 		(
 			SurpriseBox, 
-			spawn_point.position, 
+			spawn_point.position,
 			Quaternion.identity
 		) as GameObject;
 		spawned_box.transform.eulerAngles = new Vector3 (0,0,0);
@@ -83,7 +83,6 @@ public class BoxSpawner : MonoBehaviour {
 		if (Random.value <= probability) 
 		{
 			n = 1;
-				
 		} 
 
 		GameObject spawned_item = Instantiate 
