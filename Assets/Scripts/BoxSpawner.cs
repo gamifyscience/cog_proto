@@ -25,14 +25,6 @@ public class BoxSpawner : MonoBehaviour {
 	public float probability = 0.3f; 		//chance of getting an unwanted item
 	private PickupItem m_spawnItem;			//object script of the current item
 
-
-	// Use this for initialization
-	void Start () 
-	{
-		//instance = this;
-
-	}
-	 
 	void OnEnable ()
 	{
 		msManager.StartListening ("SpawnBox", SpawnBox);
@@ -50,14 +42,11 @@ public class BoxSpawner : MonoBehaviour {
 
 	public void SpawnBox()
 	{
-		//this should be setup to repeat while enabled
-		InvokeRepeating ("SpawnBoxRoutine", 0, 3);
+        SpawnBoxRoutine();
 	}
 
 	public void Grab()
 	{
-		//this we stop when a grab happens
-		CancelInvoke ("SpawnBoxRoutine");
 	}
 
 

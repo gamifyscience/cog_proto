@@ -31,14 +31,8 @@ public class ClawClick : MonoBehaviour {
 
 	public void ControlTrack (float threshold)
 	{
-		print (threshold);
-
 		if (threshold >= 99)
 			msManager.TriggerEvent ("Grab");
-
-
-		if (threshold <= 1)
-			msManager.TriggerEvent ("SpawnBox");
 
 		//TEMP record an event that the player started to grab on an error but stopped
 		//if (threshold > 60 && threshold < 80)
@@ -47,13 +41,6 @@ public class ClawClick : MonoBehaviour {
 
 	public void SpawnBox() 
 	{ 
-
 		Claw_a.SetTrigger("Retract"); 
-
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
