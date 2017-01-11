@@ -16,6 +16,8 @@ public class BugSpawner : MonoBehaviour
         for (int i = 0; i < numBugs; ++i)
         {
             Vector3 pos = RandomVector3(-10f, 10f);
+            // Less vertical variation
+            pos.y *= 0.2f;
 
             SpawnBug(pos);
         }
@@ -33,6 +35,6 @@ public class BugSpawner : MonoBehaviour
     // Spawns a single bug.
     private void SpawnBug(Vector3 position)
     {
-        GameObject bug = Instantiate(m_bugPrefab, position, Quaternion.identity) as GameObject;
+        Instantiate(m_bugPrefab, position, Quaternion.identity);
     }
 }
