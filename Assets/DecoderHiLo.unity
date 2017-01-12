@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 1531509493}
   - component: {fileID: 1531509496}
   - component: {fileID: 1531509494}
-  - component: {fileID: 1531509497}
+  - component: {fileID: 1531509495}
   m_Layer: 9
   m_Name: Reticule
   m_TagString: MainCamera
@@ -976,6 +976,17 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1531509495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531509492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717573da86b4e204baaa8d6e0c190c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &1531509496
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -984,17 +995,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531509492}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1531509497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531509492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f941e10d48d4d458b99c5bbe269fdb29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1537459777
 GameObject:
   m_ObjectHideFlags: 0

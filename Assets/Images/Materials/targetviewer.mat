@@ -138,6 +138,12 @@ Material:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
+        name: color1
+      second: {r: 0, g: 1, b: 0, a: 1}
+    - first:
+        name: color2
+      second: {r: 1, g: 0, b: 0, a: 1}
+    - first:
         name: cutoffColor
       second: {r: 0, g: 0, b: 0, a: 0}
     - first:

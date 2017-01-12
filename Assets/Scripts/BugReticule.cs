@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HitBugsource : MonoBehaviour
+public class BugReticule : MonoBehaviour
 {
     // Are we tweening the reticule color from green to red?
     private bool m_isTweening = false;
