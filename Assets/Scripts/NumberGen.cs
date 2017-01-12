@@ -11,8 +11,9 @@ public class NumberGen : MonoBehaviour
     public int NumPause = 4;
     public Text HiLowText;
     public Text Score;
-    public int points = 0;
-    public bool targetState = false;
+
+    private int points = 0;
+    public bool isTargetAcquired = false;
 
 
     void Start()
@@ -25,16 +26,16 @@ public class NumberGen : MonoBehaviour
 
     void TargetAcquired()
     {
-        if (targetState == false)
+        if (isTargetAcquired == false)
         {
-            targetState = true;
+            isTargetAcquired = true;
             StartCoroutine(GenHiLow());
         }
     }
 
     void TargetOff()
     {
-        targetState = false;
+        isTargetAcquired = false;
     }
 
     IEnumerator GenHiLow()
@@ -43,7 +44,7 @@ public class NumberGen : MonoBehaviour
         if (round <= 15)
         {
             yield return new WaitForSeconds(NumPause);
-            if (targetState == false)
+            if (isTargetAcquired == false)
             {
 
                 float x = Random.Range(2f, lastRoot) / 2;
@@ -71,7 +72,7 @@ public class NumberGen : MonoBehaviour
         if (outcome == compareBool)
         {
             points++;
-            print("on Target: " + targetState);
+            print("on Target: " + isTargetAcquired);
         }
         print(outcome + ":" + compareBool + ":" + points);
         UpdateScore(points);
