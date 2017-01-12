@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ARCam : MonoBehaviour {
+public class ARCam : MonoBehaviour
+{
     private bool m_isUsingGyro = true;
 
-    void Start () {
-		/// for movement in real space
-		Input.gyro.enabled = true;
+    void Start()
+    {
+        /// for movement in real space
+        Input.gyro.enabled = true;
 
         // If there's no gyroscope support, no Unity Remote, and we're in the editor, use
         // mouselook instead.
@@ -19,8 +21,9 @@ public class ARCam : MonoBehaviour {
 #endif
     }
 
-	void Update () {
-		Quaternion rotation = new Quaternion();
+    void Update()
+    {
+        Quaternion rotation = new Quaternion();
 
         if (m_isUsingGyro)
         {
@@ -29,17 +32,19 @@ public class ARCam : MonoBehaviour {
             transform.rotation = rotation;
         }
 
-		//ray from the camera for detenction of objects
-		RaycastHit hit;
+        //ray from the camera for detenction of objects
+        RaycastHit hit;
         var ray = new Ray(transform.position, transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * 84, Color.yellow);
 
-		if (Physics.Raycast (ray, out hit))
-		{
-			if (hit.collider != null)
-				msManager.TriggerEvent ("TargetAcquired");
-		} else {
-			msManager.TriggerEvent ("TargetOff");
-		}
-	}
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider != null)
+                msManager.TriggerEvent("TargetAcquired");
+        }
+        else
+        {
+            msManager.TriggerEvent("TargetOff");
+        }
+    }
 }
