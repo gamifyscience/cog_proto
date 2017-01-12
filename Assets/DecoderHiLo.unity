@@ -466,8 +466,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bugPrefab: {fileID: 1774241804198170, guid: 3cf803096ed6c2249bcb21581afdd18b,
     type: 2}
-  kMinBugCount: 2
+  kMinBugCount: 4
   kMaxBugCount: 6
+  kMinBugDistance: 5
+  kMaxBugDistance: 15
 --- !u!224 &919099713 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224425050902520574, guid: 9f6c0821e3091244da310b0b178a9f94,
@@ -847,8 +849,7 @@ MonoBehaviour:
   NumPause: 2
   HiLowText: {fileID: 1350650058}
   Score: {fileID: 1935087897}
-  points: 0
-  targetState: 0
+  isTargetAcquired: 0
 --- !u!1 &1476972746
 GameObject:
   m_ObjectHideFlags: 0

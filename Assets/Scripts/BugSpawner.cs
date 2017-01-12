@@ -8,28 +8,35 @@ public class BugSpawner : MonoBehaviour
     public int kMinBugCount = 2;
     public int kMaxBugCount = 6;
 
+    // These define how far away from the camera the bugs can spawn.
+    public float kMinBugDistance = 5f;
+    public float kMaxBugDistance = 15f;
+
     private void Awake()
     {
         int numBugs = Random.Range(kMinBugCount, kMaxBugCount);
+        Vector3 camPos = Camera.main.transform.position;
 
         // Spawn some bugs near the world origin.
         for (int i = 0; i < numBugs; ++i)
         {
-            Vector3 pos = RandomVector3(-10f, 10f);
-            // Less vertical variation
-            pos.y *= 0.2f;
+            Vector3 pos = GetRandomBugPosition(camPos, kMinBugDistance, kMaxBugDistance);
 
             SpawnBug(pos);
         }
     }
 
-    private static Vector3 RandomVector3(float min, float max)
+    // minDistance and maxDistance signify the range of possible distances from the origin.
+    private static Vector3 GetRandomBugPosition(Vector3 origin, float minDistance, float maxDistance)
     {
-        return new Vector3(
-            Random.Range(min, max),
-            Random.Range(min, max),
-            Random.Range(min, max)
-            );
+        // Get a random direction vector
+        Vector3 direction = RandomUtils.GetNormalizedVector();
+
+        // Extend the vector out to a random distance
+        direction *= Random.Range(minDistance, maxDistance);
+
+        // Start from the specified origin
+        return direction + origin;
     }
 
     // Spawns a single bug.
