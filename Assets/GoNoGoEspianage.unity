@@ -3665,7 +3665,7 @@ MonoBehaviour:
   scoreText: {fileID: 651413680}
   countText: {fileID: 1626407214}
   roundText: {fileID: 506487714}
-  kBoxesPerRound: 3
+  kBoxesPerRound: 5
 --- !u!4 &1801984124
 Transform:
   m_ObjectHideFlags: 0

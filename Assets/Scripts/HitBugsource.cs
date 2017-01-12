@@ -15,11 +15,15 @@ public class HitBugsource : MonoBehaviour {
 
 	void TargetAcquired()
 	{
-		gameObject.GetComponent<Renderer>().material.color = Color.green;
+        var material = gameObject.GetComponent<Renderer>().material;
+        material.SetFloat("cutoff", 0f);
 	}
 
 	void TargetOff ()
 	{
-		gameObject.GetComponent<Renderer>().material.color = Color.red;
-	}
+        var material = gameObject.GetComponent<Renderer>().material;
+
+        // TODO: slowly tween to 1f
+        material.SetFloat("cutoff", 1f);
+    }
 }
