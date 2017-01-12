@@ -55,6 +55,7 @@ public class PickupItem : MonoBehaviour
         {
             end_position = GameObject.Find("EndPoint").transform;
             msManager.TriggerEvent("aiGrab");
+            msManager.TriggerEvent("UpdateScore");
             //			iTween.MoveTo
             //			(
             //				gameObject, 
@@ -78,7 +79,6 @@ public class PickupItem : MonoBehaviour
     {
         msManager.TriggerEvent("UpdateScore");
         Destroy(gameObject, 0.3f);
-
     }
 
     void Explode()

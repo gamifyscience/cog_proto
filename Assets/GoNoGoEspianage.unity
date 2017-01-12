@@ -3640,7 +3640,6 @@ GameObject:
   - component: {fileID: 1801984124}
   - component: {fileID: 1801984123}
   - component: {fileID: 1801984125}
-  - component: {fileID: 1801984126}
   m_Layer: 0
   m_Name: uiManager
   m_TagString: Untagged
@@ -3659,19 +3658,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1f204c7a364a0a95b4ce2ccb0f34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: -0.01
+  spawnTime: 0
   grabTime: 0
   score: 0
   newScore: 0
-  count: 0
-  errorA: 0
-  errorB: 0
-  errorC: 0
-  itemCount: 0
-  round: 0
   scoreText: {fileID: 651413680}
   countText: {fileID: 1626407214}
-  errorText: {fileID: 506487714}
+  roundText: {fileID: 506487714}
+  kBoxesPerRound: 3
 --- !u!4 &1801984124
 Transform:
   m_ObjectHideFlags: 0
@@ -3697,18 +3691,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonGo: {fileID: 476607162}
---- !u!114 &1801984126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1801984122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11f86eb45b2a24ffda2883eff1dbfb48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonStop: {fileID: 0}
 --- !u!1 &1809964862
 GameObject:
   m_ObjectHideFlags: 0
