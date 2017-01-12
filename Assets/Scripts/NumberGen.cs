@@ -40,7 +40,6 @@ public class NumberGen : MonoBehaviour
 
     IEnumerator GenHiLow()
     {
-        print(round);
         if (round <= 15)
         {
             yield return new WaitForSeconds(NumPause);

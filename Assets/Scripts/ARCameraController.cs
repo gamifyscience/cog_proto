@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ARCam : MonoBehaviour
+public class ARCameraController : MonoBehaviour
 {
     private bool m_isUsingGyro = true;
     // Were we looking at a bug last frame?
