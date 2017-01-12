@@ -1,29 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HitBugsource : MonoBehaviour {
-	//public GameObject retical;
+public class HitBugsource : MonoBehaviour
+{
+    // Are we tweening the reticule color from green to red?
+    private bool m_isTweening = false;
+    private float m_tweenStartTime = 0f;
+    Material material = null;
 
-	// Use this for initialization
-	void Start () {
-		//GameObject retical = this.gameObject;
-		//retical.transform.position = GetComponent<Camera>().ScreenToWorldPoint( new Vector3(Screen.width/2, Screen.height/2, Camera.main.nearClipPlane) );
-		msManager.StartListening ("TargetAcquired", TargetAcquired);
-		msManager.StartListening ("TargetOff", TargetOff);
-	}
+    void Start()
+    {
+        material = gameObject.GetComponent<Renderer>().material;
 
+        msManager.StartListening("TargetAcquired", TargetAcquired);
+        msManager.StartListening("TargetOff", TargetOff);
 
-	void TargetAcquired()
-	{
-        var material = gameObject.GetComponent<Renderer>().material;
-        material.SetFloat("cutoff", 0f);
-	}
-
-	void TargetOff ()
-	{
-        var material = gameObject.GetComponent<Renderer>().material;
-
-        // TODO: slowly tween to 1f
+        // Start with a red reticule. We'll get the "TargetAcquired" event if we're
+        // actually pointing at something
         material.SetFloat("cutoff", 1f);
+    }
+
+    void Update()
+    {
+        if (m_isTweening)
+        {
+            float timeElapsed = Time.time - m_tweenStartTime;
+
+            material.SetFloat("cutoff", timeElapsed);
+
+            if (timeElapsed >= 1f)
+                m_isTweening = false;
+        }
+    }
+
+    void TargetAcquired()
+    {
+        material.SetFloat("cutoff", 0f);
+    }
+
+    void TargetOff()
+    {
+        // We're not looking at the bug anymore, so start tweening the reticule
+        // to red.
+        m_isTweening = true;
+        m_tweenStartTime = Time.time;
     }
 }

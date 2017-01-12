@@ -4,6 +4,8 @@ using System.Collections;
 public class ARCam : MonoBehaviour
 {
     private bool m_isUsingGyro = true;
+    // Were we looking at a bug last frame?
+    private bool m_wasPointingAtBug = false;
 
     void Start()
     {
@@ -39,12 +41,16 @@ public class ARCam : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider != null)
+            if (hit.collider != null && !m_wasPointingAtBug)
+            {
                 msManager.TriggerEvent("TargetAcquired");
+                m_wasPointingAtBug = true;
+            }
         }
-        else
+        else if(m_wasPointingAtBug)
         {
             msManager.TriggerEvent("TargetOff");
+            m_wasPointingAtBug = false;
         }
     }
 }
