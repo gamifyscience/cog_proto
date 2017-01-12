@@ -8,6 +8,11 @@ using UnityEngine;
 // Sends events when we acquire, start to lose, or completely lose a bug.
 public class BugTargeting : MonoBehaviour
 {
+    public delegate void TargetChangedDelegate(GameObject target, eTargetingState oldState, eTargetingState newState);
+    public TargetChangedDelegate OnTargetingChanged;
+
+    public static BugTargeting Instance { get; private set; }
+
     private float kTargetedAngle = 5f;
     private float kBarelyTargetedAngle = 10f;
 
@@ -25,6 +30,14 @@ public class BugTargeting : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogWarning("Duplicate BugTargeting detected. Destroying...");
+            Destroy(Instance);
+        }
+
+        Instance = this;
+
         StartCoroutine(CheckTargets());
     }
 
@@ -73,6 +86,11 @@ public class BugTargeting : MonoBehaviour
         {
             // Nothing has changed.
             return;
+        }
+
+        if (OnTargetingChanged != null)
+        {
+            OnTargetingChanged(target, m_state, state);
         }
 
         m_state = state;

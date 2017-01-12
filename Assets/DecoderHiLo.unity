@@ -468,8 +468,8 @@ MonoBehaviour:
     type: 2}
   kMinBugCount: 4
   kMaxBugCount: 6
-  kMinBugDistance: 5
-  kMaxBugDistance: 15
+  kMinBugDistance: 10
+  kMaxBugDistance: 18
 --- !u!224 &919099713 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224425050902520574, guid: 9f6c0821e3091244da310b0b178a9f94,

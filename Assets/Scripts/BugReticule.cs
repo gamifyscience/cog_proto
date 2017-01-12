@@ -3,46 +3,50 @@ using System.Collections;
 
 public class BugReticule : MonoBehaviour
 {
-    // Are we tweening the reticule color from green to red?
-    private bool m_isTweening = false;
-    private float m_tweenStartTime = 0f;
     Material material = null;
 
     void Start()
     {
         material = gameObject.GetComponent<Renderer>().material;
 
-        msManager.StartListening("TargetAcquired", TargetAcquired);
-        msManager.StartListening("TargetOff", TargetOff);
+        BugTargeting.Instance.OnTargetingChanged += OnTargetingChanged;
 
-        // Start with a red reticule. We'll get the "TargetAcquired" event if we're
+        // Start with a red reticule. We'll get an event if we're
         // actually pointing at something
-        material.SetFloat("cutoff", 1f);
+        material.color = Color.red;
     }
 
-    void Update()
+    private void OnDestroy()
     {
-        if (m_isTweening)
+        BugTargeting.Instance.OnTargetingChanged -= OnTargetingChanged;
+    }
+
+    private void OnTargetingChanged(GameObject target, BugTargeting.eTargetingState oldState, BugTargeting.eTargetingState newState)
+    {
+        switch (newState)
         {
-            float timeElapsed = Time.time - m_tweenStartTime;
-
-            material.SetFloat("cutoff", timeElapsed);
-
-            if (timeElapsed >= 1f)
-                m_isTweening = false;
+            case BugTargeting.eTargetingState.Targeted:
+                material.color = Color.green;
+                break;
+            case BugTargeting.eTargetingState.BarelyTargeted:
+                material.color = Color.yellow;
+                break;
+            case BugTargeting.eTargetingState.Untargeted:
+                material.color = Color.red;
+                break;
         }
+
     }
 
     void TargetAcquired()
     {
-        material.SetFloat("cutoff", 0f);
+        material.color = Color.green;
     }
 
     void TargetOff()
     {
         // We're not looking at the bug anymore, so start tweening the reticule
         // to red.
-        m_isTweening = true;
-        m_tweenStartTime = Time.time;
+        material.color = Color.red;
     }
 }

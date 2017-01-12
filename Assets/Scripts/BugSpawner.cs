@@ -9,7 +9,7 @@ public class BugSpawner : MonoBehaviour
     public int kMaxBugCount = 6;
 
     // These define how far away from the camera the bugs can spawn.
-    public float kMinBugDistance = 5f;
+    public float kMinBugDistance = 7f;
     public float kMaxBugDistance = 15f;
 
     private void Awake()
