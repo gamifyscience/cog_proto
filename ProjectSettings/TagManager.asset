@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Surprise Box
   - Belt
+  - Bug
   layers:
   - Default
   - TransparentFX

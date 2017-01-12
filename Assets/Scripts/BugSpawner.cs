@@ -20,6 +20,7 @@ public class BugSpawner : MonoBehaviour
         // Spawn some bugs near the world origin.
         for (int i = 0; i < numBugs; ++i)
         {
+            // TODO: ensure that bugs can't spawn too close to one another.
             Vector3 pos = GetRandomBugPosition(camPos, kMinBugDistance, kMaxBugDistance);
 
             SpawnBug(pos);
