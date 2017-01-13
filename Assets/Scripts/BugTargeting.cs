@@ -84,6 +84,11 @@ public class BugTargeting : MonoBehaviour
         m_target = null;
     }
 
+    public bool HasTarget()
+    {
+        return m_target != null;
+    }
+
     private void UpdateCurrentTarget(GameObject target, float angle)
     {
         eTargetingState state = CalculateStateFromAngle(angle);

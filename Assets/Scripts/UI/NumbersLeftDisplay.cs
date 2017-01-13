@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Waits for the current number to change and updates our text label accordingly.
+// Updates a text label to show how many numbers we've guessed for the current
+// bug.
 public class NumbersLeftDisplay : MonoBehaviour
 {
     private Text m_textLabel;

@@ -6,19 +6,21 @@ using UnityEngine;
 public class BugGameManager : MonoBehaviour
 {
     public static BugGameManager Instance { get; private set; }
-
-    public delegate void IntDelegate(int newNumber);
     public IntDelegate OnNumberChanged;
     public IntDelegate OnPhaseChanged;
 
+    public delegate void IntDelegate(int newNumber);
+
     public int CurrentNumber { get; private set; }
     public const int kNumPhases = 5;
+
+    private int m_previousNumber;
 
     // These specify the range of possible random numbers (inclusive).
     private const int kRandomMin = 1;
     private const int kRandomMax = 20;
 
-    private int m_previousNumber;
+    // Tracks how many numbers we've guessed for the current bug.
     private int m_currentPhase = 1;
 
     private void Awake()
@@ -44,8 +46,11 @@ public class BugGameManager : MonoBehaviour
     }
 
     // Called when the user clicks a higher/lower button.
-    public void ProcessUserInput(bool higher)
+    public void ProcessPlayerGuess(bool higher)
     {
+        if (!BugTargeting.Instance.HasTarget())
+            return;
+
         // If the user guessed right, advance to the next phase
         if (higher == (CurrentNumber > m_previousNumber))
         {
@@ -65,15 +70,15 @@ public class BugGameManager : MonoBehaviour
             m_currentPhase = 1;
         }
 
-        if (OnPhaseChanged != null)
-            OnPhaseChanged(m_currentPhase);
-
         // Get a new number that's different from the previous one.
         m_previousNumber = CurrentNumber;
         CurrentNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax, m_previousNumber);
 
         if (OnNumberChanged != null)
             OnNumberChanged(CurrentNumber);
+
+        if (OnPhaseChanged != null)
+            OnPhaseChanged(m_currentPhase);
     }
 
     private void OnTargetingChanged(GameObject oldTarget, GameObject newTarget, BugTargeting.eTargetingState oldState, BugTargeting.eTargetingState newState)

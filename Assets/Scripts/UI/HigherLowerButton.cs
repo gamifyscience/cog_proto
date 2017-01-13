@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// The script for the "Higher" and "Lower" buttons.
+// The script for the "Higher" and "Lower" buttons. Feeds input into BugGameManager.
 public class HigherLowerButton : MonoBehaviour
 {
     // Is this the "Higher" button? (If not, it's the "Lower" button)
@@ -27,6 +27,6 @@ public class HigherLowerButton : MonoBehaviour
 
     void OnClick()
     {
-        BugGameManager.Instance.ProcessUserInput(m_isHigherButton);
+        BugGameManager.Instance.ProcessPlayerGuess(m_isHigherButton);
     }
 }
