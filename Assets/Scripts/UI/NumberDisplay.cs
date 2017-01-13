@@ -21,7 +21,10 @@ public class NumberDisplay : MonoBehaviour
 
     private void Start()
     {
-        BugGameManager.Instance.OnNumberChanged += OnNumberChanged;
+        var bugGameManager = BugGameManager.Instance;
+
+        OnNumberChanged(bugGameManager.CurrentNumber);
+        bugGameManager.OnNumberChanged += OnNumberChanged;
     }
 
     private void OnNumberChanged(int newNumber)

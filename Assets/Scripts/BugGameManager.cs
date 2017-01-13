@@ -11,14 +11,15 @@ public class BugGameManager : MonoBehaviour
     public IntDelegate OnNumberChanged;
     public IntDelegate OnPhaseChanged;
 
+    public int CurrentNumber { get; private set; }
+    public const int kNumPhases = 5;
+
     // These specify the range of possible random numbers (inclusive).
     private const int kRandomMin = 1;
     private const int kRandomMax = 20;
 
     private int m_previousNumber;
-    private int m_currentNumber;
     private int m_currentPhase = 1;
-    public const int kNumPhases = 5;
 
     private void Awake()
     {
@@ -29,11 +30,15 @@ public class BugGameManager : MonoBehaviour
         }
 
         Instance = this;
+
+        // This value will be moved into m_previousNumber as soon as we look at a bug
+        CurrentNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax);
     }
 
-    void Start()
+    private void Start()
 	{
-        m_previousNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax);
+        if (OnNumberChanged != null)
+            OnNumberChanged(CurrentNumber);
 
         BugTargeting.Instance.OnTargetingChanged += OnTargetingChanged;
     }
@@ -42,7 +47,7 @@ public class BugGameManager : MonoBehaviour
     public void ProcessUserInput(bool higher)
     {
         // If the user guessed right, advance to the next phase
-        if (higher == (m_currentNumber > m_previousNumber))
+        if (higher == (CurrentNumber > m_previousNumber))
         {
             ++m_currentPhase;
 
@@ -50,6 +55,8 @@ public class BugGameManager : MonoBehaviour
             {
                 // We've finished all the phases, so erase the bug.
                 BugTargeting.Instance.DestroyCurrentTarget();
+
+                m_currentPhase = 1;
             }
         }
         // If the user was wrong, reset to phase 1
@@ -62,11 +69,11 @@ public class BugGameManager : MonoBehaviour
             OnPhaseChanged(m_currentPhase);
 
         // Get a new number that's different from the previous one.
-        m_previousNumber = m_currentNumber;
-        m_currentNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax, m_previousNumber);
+        m_previousNumber = CurrentNumber;
+        CurrentNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax, m_previousNumber);
 
         if (OnNumberChanged != null)
-            OnNumberChanged(m_currentNumber);
+            OnNumberChanged(CurrentNumber);
     }
 
     private void OnTargetingChanged(GameObject oldTarget, GameObject newTarget, BugTargeting.eTargetingState oldState, BugTargeting.eTargetingState newState)
@@ -85,11 +92,11 @@ public class BugGameManager : MonoBehaviour
         if (oldTarget != newTarget)
         {
             // Get a new number that is different from the previous one
-            m_previousNumber = m_currentNumber;
-            m_currentNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax, m_previousNumber);
+            m_previousNumber = CurrentNumber;
+            CurrentNumber = RandomUtils.GetRandom(kRandomMin, kRandomMax, m_previousNumber);
 
             if (OnNumberChanged != null)
-                OnNumberChanged(m_currentNumber);
+                OnNumberChanged(CurrentNumber);
         }
     }
 }
