@@ -25,4 +25,24 @@ public static class RandomUtils
 
         return new Vector3(x, y, z).normalized;
     }
+
+    // Gets a random integer between min and max (inclusive).
+    public static int GetRandom(int min, int max)
+    {
+        return Random.Range(min, max);
+    }
+
+    // Gets a random integer between min and max (inclusive).
+    // Guaranteed not to be the value specified in the "exclude" parameter.
+    public static int GetRandom(int min, int max, int exclude)
+    {
+        int retVal;
+
+        do
+        {
+            retVal = GetRandom(min, max);
+        } while (retVal == exclude);
+
+        return retVal;
+    }
 }

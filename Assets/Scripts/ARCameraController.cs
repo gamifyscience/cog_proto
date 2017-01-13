@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Uses the phone's gyroscope to change the camera's rotation.
 public class ARCameraController : MonoBehaviour
 {
     private bool m_isUsingGyro = true;
-    // Were we looking at a bug last frame?
-    private bool m_wasPointingAtBug = false;
 
     void Start()
     {
@@ -32,25 +31,6 @@ public class ARCameraController : MonoBehaviour
             Vector3 angles = Input.gyro.attitude.eulerAngles;
             rotation.eulerAngles = new Vector3(-angles.x, -angles.y, angles.z);
             transform.rotation = rotation;
-        }
-
-        //ray from the camera for detenction of objects
-        RaycastHit hit;
-        var ray = new Ray(transform.position, transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * 84, Color.yellow);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider != null && !m_wasPointingAtBug)
-            {
-                msManager.TriggerEvent("TargetAcquired");
-                m_wasPointingAtBug = true;
-            }
-        }
-        else if(m_wasPointingAtBug)
-        {
-            msManager.TriggerEvent("TargetOff");
-            m_wasPointingAtBug = false;
         }
     }
 }

@@ -8,8 +8,8 @@ using UnityEngine;
 // Sends events when we acquire, start to lose, or completely lose a bug.
 public class BugTargeting : MonoBehaviour
 {
-    public delegate void TargetChangedDelegate(GameObject target, eTargetingState oldState, eTargetingState newState);
-    public TargetChangedDelegate OnTargetingChanged;
+    public delegate void TargetingChangedDelegate(GameObject oldTarget, GameObject newTarget, eTargetingState oldState, eTargetingState newState);
+    public TargetingChangedDelegate OnTargetingChanged;
 
     public static BugTargeting Instance { get; private set; }
 
@@ -78,9 +78,21 @@ public class BugTargeting : MonoBehaviour
         }
     }
 
+    public void DestroyCurrentTarget()
+    {
+        Destroy(m_target);
+        m_target = null;
+    }
+
     private void UpdateCurrentTarget(GameObject target, float angle)
     {
         eTargetingState state = CalculateStateFromAngle(angle);
+
+        if (state == eTargetingState.Untargeted)
+        {
+            // The target wasn't focused enough to count, so null it out
+            target = null;
+        }
 
         if (target == m_target && state == m_state)
         {
@@ -90,7 +102,7 @@ public class BugTargeting : MonoBehaviour
 
         if (OnTargetingChanged != null)
         {
-            OnTargetingChanged(target, m_state, state);
+            OnTargetingChanged(m_target, target, m_state, state);
         }
 
         m_state = state;

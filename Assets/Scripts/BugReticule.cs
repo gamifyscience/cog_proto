@@ -21,7 +21,7 @@ public class BugReticule : MonoBehaviour
         BugTargeting.Instance.OnTargetingChanged -= OnTargetingChanged;
     }
 
-    private void OnTargetingChanged(GameObject target, BugTargeting.eTargetingState oldState, BugTargeting.eTargetingState newState)
+    private void OnTargetingChanged(GameObject oldTarget, GameObject newTarget, BugTargeting.eTargetingState oldState, BugTargeting.eTargetingState newState)
     {
         switch (newState)
         {
