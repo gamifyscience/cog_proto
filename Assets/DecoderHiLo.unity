@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 535682343}
   - component: {fileID: 535682342}
   - component: {fileID: 535682341}
+  - component: {fileID: 535682344}
   m_Layer: 5
   m_Name: ButtonLower
   m_TagString: Untagged
@@ -338,7 +339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1350650060}
+      - m_Target: {fileID: 0}
         m_MethodName: CompareOutcome
         m_Mode: 3
         m_Arguments:
@@ -384,6 +385,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 535682339}
+--- !u!114 &535682344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535682339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed4ff84224b08f4c9b1a1d13358004b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isHigherButton: 0
 --- !u!1 &695313656
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +573,7 @@ GameObject:
   - component: {fileID: 1080837737}
   - component: {fileID: 1080837736}
   - component: {fileID: 1080837735}
+  - component: {fileID: 1080837738}
   m_Layer: 5
   m_Name: ButtonHigher
   m_TagString: Untagged
@@ -625,7 +639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1350650060}
+      - m_Target: {fileID: 0}
         m_MethodName: CompareOutcome
         m_Mode: 3
         m_Arguments:
@@ -682,6 +696,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1080837733}
+--- !u!114 &1080837738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080837733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed4ff84224b08f4c9b1a1d13358004b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isHigherButton: 1
 --- !u!1 &1132518937
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +834,7 @@ GameObject:
   - component: {fileID: 1350650058}
   - component: {fileID: 1350650060}
   m_Layer: 5
-  m_Name: HiLowText
+  m_Name: NumberText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,17 +905,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1350650056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8024f780788fc47bebf43d04209208da, type: 3}
+  m_Script: {fileID: 11500000, guid: 40bc2c5d31e9f5b4fa01ab58811866f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outcome: 0
-  lastRoot: 1
-  round: 1
-  hiRange: 20
-  NumPause: 2
-  HiLowText: {fileID: 1350650058}
-  Score: {fileID: 1935087897}
-  isTargetAcquired: 0
 --- !u!1 &1476972746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,8 +1470,9 @@ GameObject:
   - component: {fileID: 1935087896}
   - component: {fileID: 1935087898}
   - component: {fileID: 1935087897}
+  - component: {fileID: 1935087899}
   m_Layer: 5
-  m_Name: Remaining
+  m_Name: NumbersLeftText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1502,20 +1521,31 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 12
-    m_MaxSize: 32
+    m_MaxSize: 24
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Remaining:'
+  m_Text: 'Numbers left:'
 --- !u!222 &1935087898
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935087895}
+--- !u!114 &1935087899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935087895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9d773e00bfb6743abbf9d1960d4284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2008087132
 GameObject:
   m_ObjectHideFlags: 0
