@@ -7,11 +7,15 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/menu.unity
+  - enabled: 1
+    path: Assets/DecodeCountSort.unity
+  - enabled: 0
+    path: Assets/DecoderHiLo.unity
+  - enabled: 1
+    path: Assets/DecoderNBack.unity
+  - enabled: 1
+    path: Assets/GoNoGoEspianage.unity
   - enabled: 0
     path: Assets/Decoder.unity
   - enabled: 0
     path: Assets/GameScene.unity
-  - enabled: 1
-    path: Assets/GoNoGoEspianage.unity
-  - enabled: 1
-    path: Assets/DecoderHiLo.unity

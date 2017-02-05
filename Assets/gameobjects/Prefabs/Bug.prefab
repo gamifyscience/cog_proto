@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114294591459736430}
   m_Layer: 0
   m_Name: Bug
-  m_TagString: Bug
+  m_TagString: Drone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ Halo:
   m_Enabled: 1
   m_Color:
     serializedVersion: 2
-    rgba: 4289309183
+    rgba: 4283479270
   m_Size: 2.5
 --- !u!135 &135508676392718990
 SphereCollider:

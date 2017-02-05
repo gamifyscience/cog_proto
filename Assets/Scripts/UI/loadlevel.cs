@@ -13,7 +13,10 @@ public class loadlevel : MonoBehaviour {
 	}
 
 	public void ButtonClickDecoder1 () {
-		SceneManager.LoadScene ("DecoderHiLo", LoadSceneMode.Single);
+		SceneManager.LoadScene ("DecoderNBack", LoadSceneMode.Single);
+	}
+	public void ButtonClickDecoder2 () {
+		SceneManager.LoadScene ("DecodeCountSort", LoadSceneMode.Single);
 	}
 
 	public void ButtonMenu() {

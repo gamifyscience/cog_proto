@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Attach this script to the camera to find out which bug, if any,
+// Attach this script to the camera to find out which drone, if any,
 // is being targeted.
 // 
-// Sends events when we acquire, start to lose, or completely lose a bug.
-public class BugTargeting : MonoBehaviour
+// Sends events when we acquire, start to lose, or completely lose a drone.
+public class DroneTargeting : MonoBehaviour
 {
     public delegate void TargetingChangedDelegate(GameObject oldTarget, GameObject newTarget, eTargetingState oldState, eTargetingState newState);
     public TargetingChangedDelegate OnTargetingChanged;
 
-    public static BugTargeting Instance { get; private set; }
+    public static DroneTargeting Instance { get; private set; }
 
     private float kTargetedAngle = 5f;
     private float kBarelyTargetedAngle = 10f;
@@ -32,7 +32,7 @@ public class BugTargeting : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Debug.LogWarning("Duplicate BugTargeting detected. Destroying...");
+            Debug.LogWarning("Duplicate DroneTargeting detected. Destroying...");
             Destroy(Instance);
         }
 
@@ -41,15 +41,15 @@ public class BugTargeting : MonoBehaviour
         StartCoroutine(CheckTargets());
     }
 
-    // Finds the bug that we're looking at most directly. Updates our target
+    // Finds the drone that we're looking at most directly. Updates our target
     // and targeting state as necessary.
     IEnumerator CheckTargets()
     {
         while (true)
         {
-            // TODO: Cache this list of bugs and only update it when we
+            // TODO: Cache this list of drones and only update it when we
             // expect it to have changed.
-            var bugs = GameObject.FindGameObjectsWithTag("Bug");
+            var drones = GameObject.FindGameObjectsWithTag("Drone");
 
             Vector3 camForward = transform.forward;
             Vector3 camPos = transform.position;
@@ -57,18 +57,18 @@ public class BugTargeting : MonoBehaviour
             float bestAngle = float.MaxValue;
             GameObject bestTarget = null;
 
-            foreach (GameObject bug in bugs)
+            foreach (GameObject drone in drones)
             {
-                Vector3 bugPos = bug.transform.position;
-                Vector3 directionToBug = (bugPos - camPos).normalized;
+                Vector3 dronePos = drone.transform.position;
+                Vector3 directionToDrone = (dronePos - camPos).normalized;
 
-                // Angle (in degrees) between the camera's center and the vector to the bug
-                float angle = Vector3.Angle(camForward, directionToBug);
+                // Angle (in degrees) between the camera's center and the vector to the drone
+                float angle = Vector3.Angle(camForward, directionToDrone);
 
                 if (angle < bestAngle)
                 {
                     bestAngle = angle;
-                    bestTarget = bug;
+                    bestTarget = drone;
                 }
             }
 
@@ -82,6 +82,8 @@ public class BugTargeting : MonoBehaviour
     {
         Destroy(m_target);
         m_target = null;
+
+		// TODO need to clear UI numbers for countsort task
     }
 
     public bool HasTarget()

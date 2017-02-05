@@ -7,6 +7,8 @@ TagManager:
   - Surprise Box
   - Belt
   - Bug
+  - Drone
+  - Panel
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ public class NumberDisplay : MonoBehaviour
 
     private void Start()
     {
-        var bugGameManager = BugGameManager.Instance;
+		var bugGameManager = HiLoManager.Instance;
 
         OnNumberChanged(bugGameManager.CurrentNumber);
         bugGameManager.OnNumberChanged += OnNumberChanged;

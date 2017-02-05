@@ -1,0 +1,74 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CountSortManager : MonoBehaviour {
+
+	public GameObject CountHolder;
+	public int myid;
+	public int myvalue;
+	private Text m_textLabel;
+
+	private void Awake()
+	{
+		m_textLabel = GetComponent<Text>();
+
+		if (m_textLabel == null)
+		{
+			Debug.LogError("Missing Text component!", gameObject);
+			enabled = false;
+			return;
+		}
+	}
+
+	// Use this for initialization
+	public void Start () {
+		int myvalue = 0;
+		m_textLabel.text = myvalue.ToString();
+	}
+
+	public void setupDecoder (){
+
+		if (!DroneTargeting.Instance.HasTarget ())
+			return;
+		HiLoManager.CountOrder = 1;
+		int listvalue = HiLoManager.OnSetValue(myid);
+
+		myvalue	= listvalue;
+		m_textLabel.text = myvalue.ToString();
+
+	}
+
+	public void testDecoder(){
+
+		if (!DroneTargeting.Instance.HasTarget ())
+			return;
+
+
+		//repop value with next number if the order is correct
+		// TODO there is a hack here to set countvalue to a number that can incitment
+		int myPosition = HiLoManager.CountOrder;
+		var ListManager = HiLoManager.Instance;
+		//OnListChanged(ListManager.m_CountOrder);
+		//ListManager.OnListChanged += OnListChanged;
+		Debug.LogError(HiLoManager.CountOrder + " is the CountOrder");
+		int testvalue = HiLoManager.OnGetValue(myvalue, (myPosition -1));
+		if (myvalue != testvalue)
+		{
+			HiLoManager.CountOrder = myPosition + 1;
+			myvalue	= testvalue;
+			m_textLabel.text = myvalue.ToString();
+			HiLoManager.Instance.ProcessPlayerSelect(true);
+		}
+	}
+
+	private void OnListChanged(int newNumber)
+	{
+		if (m_textLabel != null)
+		{
+			print ("onlistchanged returned this " + newNumber);//newNumber)m_textLabel.text = newNumber.ToString();
+		}
+	}
+		
+}

@@ -27,6 +27,6 @@ public class HigherLowerButton : MonoBehaviour
 
     void OnClick()
     {
-        BugGameManager.Instance.ProcessPlayerGuess(m_isHigherButton);
+		HiLoManager.Instance.ProcessPlayerGuess(m_isHigherButton);
     }
 }

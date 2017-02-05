@@ -23,14 +23,14 @@ public class NumbersLeftDisplay : MonoBehaviour
 
     private void Start()
     {
-        BugGameManager.Instance.OnPhaseChanged += OnPhaseChanged;
+		HiLoManager.Instance.OnPhaseChanged += OnPhaseChanged;
     }
 
     private void OnPhaseChanged(int newPhase)
     {
         if (m_textLabel != null)
         {
-            m_textLabel.text = newPhase + "/" + BugGameManager.kNumPhases;
+			m_textLabel.text = newPhase + "/" + HiLoManager.kNumPhases;
         }
     }
 }
