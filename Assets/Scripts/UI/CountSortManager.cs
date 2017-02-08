@@ -10,6 +10,8 @@ public class CountSortManager : MonoBehaviour {
 	public int myvalue;
 	private Text m_textLabel;
 
+	public Button btn;  //script trigger this button
+
 	private void Awake()
 	{
 		m_textLabel = GetComponent<Text>();
@@ -20,6 +22,9 @@ public class CountSortManager : MonoBehaviour {
 			enabled = false;
 			return;
 		}
+
+		//msManager.StartListening ("Targeted", Targeted);
+		//msManager.StartListening ("BarelyTargeted", BarelyTargeted);
 	}
 
 	// Use this for initialization
@@ -47,12 +52,11 @@ public class CountSortManager : MonoBehaviour {
 
 
 		//repop value with next number if the order is correct
-		// TODO there is a hack here to set countvalue to a number that can incitment
+		// TODO there is a hack here to set countvalue to a number that can incriment
 		int myPosition = HiLoManager.CountOrder;
 		var ListManager = HiLoManager.Instance;
-		//OnListChanged(ListManager.m_CountOrder);
-		//ListManager.OnListChanged += OnListChanged;
-		Debug.LogError(HiLoManager.CountOrder + " is the CountOrder");
+
+		//Debug.LogError(HiLoManager.CountOrder + " is the CountOrder");
 		int testvalue = HiLoManager.OnGetValue(myvalue, (myPosition -1));
 		if (myvalue != testvalue)
 		{
@@ -61,6 +65,22 @@ public class CountSortManager : MonoBehaviour {
 			m_textLabel.text = myvalue.ToString();
 			HiLoManager.Instance.ProcessPlayerSelect(true);
 		}
+	}
+
+
+/*	private void Targeted()
+	{
+		//if (DroneTargeting.Instance.HasTarget ())
+			
+			Button thisBtn = btn.GetComponent<Button>();
+			thisBtn.onClick.Invoke ();
+			print ("you pressed that button = magic");
+
+	} */
+
+	private void BarelyTargeted()
+	{
+		
 	}
 
 	private void OnListChanged(int newNumber)
