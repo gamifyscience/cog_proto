@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{35CE5FD7-98EB-9F85-E58F-B426B365CBCD}</ProjectGuid>
+    <ProjectGuid>{8AA0EC57-F4F7-82AE-09CA-5053F5502791}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\PauseOnClick.cs" />
      <Compile Include="Assets\Scripts\PickupItem.cs" />
      <Compile Include="Assets\Scripts\RandomUtils.cs" />
+     <Compile Include="Assets\Scripts\RealCamera.cs" />
      <Compile Include="Assets\Scripts\SimpleSmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\SurpriseBox.cs" />
      <Compile Include="Assets\Scripts\UI\ClawClick.cs" />
@@ -89,19 +90,25 @@
      <Compile Include="Assets\Scripts\UI\msScoreListener.cs" />
      <Compile Include="Assets\Scripts\UI\sortnumbers.cs" />
      <Compile Include="Assets\Scripts\aiClawClick.cs" />
+     <Compile Include="Assets\Scripts\hidePanel.cs" />
      <Compile Include="Assets\Scripts\hitthis.cs" />
      <None Include="Assets\Fabric\NOTICE.txt" />
-     <None Include="Assets\Shaders\MappedTransition.shader" />
+     <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
+     <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />
      <None Include="Assets\Plugins\Android\crashlytics-wrapper\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\fabric-init\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\crashlytics\THIRDPARTYLICENSE.txt" />
      <None Include="Assets\Plugins\Android\fabric\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\answers\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\fabric\NOTICE.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Plugins\Android\fabric\Template-AndroidManifest.xml" />
+     <None Include="Assets\gameobjects\Textures\Shaders\SciFiHologramShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\beta\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\crashlytics\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\fabric\THIRDPARTYLICENSE.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -121,15 +128,15 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Analytics">
- <HintPath>/Users/erikboyer/Documents/cog_proto/Assets/Fabric/Managed/Analytics.dll</HintPath>
+ <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Fabric/Managed/Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Validator">
- <HintPath>/Users/erikboyer/Documents/cog_proto/Assets/Fabric/Managed/Validator.dll</HintPath>
+ <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Fabric/Managed/Validator.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7CD86705-4A56-F5AB-53EB-CF80EE28AD81}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{F24C02D9-64A1-D4AD-F987-BDA12A97DE5D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

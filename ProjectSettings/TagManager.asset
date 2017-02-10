@@ -9,6 +9,7 @@ TagManager:
   - Bug
   - Drone
   - Panel
+  - realcam
   layers:
   - Default
   - TransparentFX

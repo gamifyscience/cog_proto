@@ -81,7 +81,7 @@ public class msManager : MonoBehaviour
         }
         else
         {
-            //	Debug.LogError ("You called " + eventName + " but it was lost, you may need to make an active UnityEvent");
+            	Debug.LogError ("You called " + eventName + " but it was lost, you may need to make an active UnityEvent");
             thisEvent.Invoke();
         }
     }

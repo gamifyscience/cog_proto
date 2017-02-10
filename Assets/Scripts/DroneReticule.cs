@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class DroneReticule : MonoBehaviour
 {
     Material material = null;
 	public Animator spin;// = GetComponent<Animator>();
 
-	//public GameObject[] UIPanel;
+	public GameObject[] UIPanel;
 
     void Start()
     {
@@ -16,10 +17,11 @@ public class DroneReticule : MonoBehaviour
 
         // Start with a red reticule. We'll get an event if we're
         // actually pointing at something
-        material.color = Color.red;
+        material.color = Color.blue;
 		spin.SetBool ("rotate", false);
 
-		//UIPanel = GameObject.FindGameObjectsWithTag("Panel");
+		UIPanel = GameObject.FindGameObjectsWithTag("Panel");
+
 		//UIPanel.SetValue (enabled, false);
 		//UIPanel.GetEnumerator()
 //		Debug.LogError (UIPanel);
@@ -39,13 +41,16 @@ public class DroneReticule : MonoBehaviour
 		case DroneTargeting.eTargetingState.Targeted:
 			material.color = Color.green;
 			spin.SetBool ("rotate", true);
+			msManager.TriggerEvent ("Targeted");
             break;
-        case DroneTargeting.eTargetingState.BarelyTargeted:
-                material.color = Color.yellow;
+		case DroneTargeting.eTargetingState.BarelyTargeted:
+			material.color = Color.blue;
+			//msManager.TriggerEvent ("BarelyTargeted");
             break;
-        case DroneTargeting.eTargetingState.Untargeted:
-            material.color = Color.red;
+		case DroneTargeting.eTargetingState.Untargeted:
+			material.color = Color.red;
 			spin.SetBool ("rotate", false);
+			msManager.TriggerEvent ("Untargeted");
             break;
         }
 
@@ -63,6 +68,7 @@ public class DroneReticule : MonoBehaviour
         // to red.
         material.color = Color.red;
 		spin.SetBool ("rotate", false);
+		msManager.TriggerEvent ("Untargeted");
 		//transform.Rotate(90, 0, 0, Space.Self);
     }
 }

@@ -336,9 +336,9 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
-  locationUsageDescription: 
-  microphoneUsageDescription: 
+  cameraUsageDescription: Used to scan for drones
+  locationUsageDescription: Used to track drones
+  microphoneUsageDescription: Used to record voice feedback
   XboxTitleId: 
   XboxImageXexPath: 
   XboxSpaPath: 

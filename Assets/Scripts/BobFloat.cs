@@ -20,7 +20,14 @@ public class BobFloat : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, originalY + ((float)Mathf.Sin(Time.time + m_timeOffset) * floatStrength),
-                transform.position.z);
+       transform.position = new Vector3(transform.position.x, originalY + ((float)Mathf.Sin(Time.time + m_timeOffset) * floatStrength), transform.position.z);
+
+		// Rotate the object around its local X axis at 1 degree per second
+		transform.Rotate(Vector3.up * (40 * Time.deltaTime * m_timeOffset));
+		//transform.RotateAround(Vector3.zero, Vector3.up, 20 * Time.deltaTime);
+
+		// ...also rotate around the World's Y axis
+		//transform.Rotate(Vector3.up * Time.deltaTime, Space.World);
+		
     }
 }

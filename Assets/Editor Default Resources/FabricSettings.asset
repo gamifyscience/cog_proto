@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: FabricSettings
   m_EditorClassIdentifier: 
   email: eboyer@sandboks.com
-  rawToken: '{"access_token":"89fd33ad3d014486460bd6d63daa423a13fad922b4302eb83b447e0b9e1fe7d3","refresh_token":"327c9bb4a061a99d86cd4d652b31f38cd6661babc109b1093f137c1ed092aefb","token_type":"bearer","expires_in":86400}'
+  rawToken: '{"access_token":"aed4e3a72ec36ce9ab2ace15be652ab63bea27113e3222f5c9e4b298cba2cdbc","refresh_token":"f3154d17961d94b4f395c2022fe38fd9af122d2cb8deea5db328a6e29ab3452f","token_type":"bearer","expires_in":86400}'
   organization:
-    Name: HardScience
-    Id: 57bf29adfe618aadf000004a
-    ApiKey: e7192241e24550f9347031b12bb7abb5a3f0b50b
-    BuildSecret: 2ad01f2b084603fdfa385ce80e80576889bbee0b6298f211d49bbe8dcf57f801
+    Name: 
+    Id: 
+    ApiKey: 
+    BuildSecret: 
   iconUrl: https://s3.amazonaws.com/assets.crashlytics.com/production/project/6026104/project_icon/2598490/icon.png
   dashboardUrl: https://www.fabric.io/hardscience/ios/apps/com.hardscience.agentone
   initialization: 0

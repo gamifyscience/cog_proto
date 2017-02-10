@@ -28,6 +28,7 @@ public class HiLoManager : MonoBehaviour
 
 	// COUNTSORTGAME These are the ordered lists for the coundown array 
 	private static List<int> firstset = new List<int>() {25,24,23,22,21,20,19,18,17,16,15,14};
+//	private static List<string> secondset = new List<int>() {"A","B","C","D","E","F","G","H","I","J","K","L"};
 	private static List<int> orderset = new List<int>() {25,24,23,22,21,20,19,18,17,16,15,14};
 	private static List<int> nextset  = new List<int>() {13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2};
 	public static int CountOrder;
@@ -55,6 +56,11 @@ public class HiLoManager : MonoBehaviour
 		//OnListChanged(CountOrder);
         DroneTargeting.Instance.OnTargetingChanged += OnTargetingChanged;
 
+		CountSortList ();
+    }
+
+	private void CountSortList ()
+	{
 		//count sort random array
 		for (int i = 0; i < firstset.Count; i++) {
 			int mixedset = firstset[i];
@@ -63,18 +69,27 @@ public class HiLoManager : MonoBehaviour
 			firstset[randomIndex] = mixedset;
 		}
 
-    }
+		//TODO: mix up the gameplay with alternating lists to sort.
+		/*	for (int i = 0; i < secondset.Count; i++) {
+			int letterset = secondset[i];
+			int randomIndex = Random.Range(i, secondset.Count);
+			secondset[i] = secondset[randomIndex];
+			secondset[randomIndex] = letterset;
+		} */
+
+	}
 
 	//DecoderCountSort grid setup
 	public static int OnSetValue ( int indexValue )
 	{
+		//if(intScore == 0)
 		return firstset [indexValue];
 	}
 
 	public static int OnGetValue (int testValue, int testPosition)
 	{
 		//test values and swap with new number if pass
-		print(orderset [testPosition]+" @" + testPosition + " was compared to " + testValue + " -from CountOrder  " + CountOrder);
+		//print(orderset [testPosition]+" @" + testPosition + " was compared to " + testValue + " -from CountOrder  " + CountOrder);
 		if (testValue == orderset [testPosition]) {
 			int i = nextset [testPosition];
 			return i;
@@ -121,29 +136,26 @@ public class HiLoManager : MonoBehaviour
     }
 
 	// Called when the user clicks a countsort buttons.
-	public void ProcessPlayerSelect(bool higher)
+	public void ProcessPlayerSelect()
 	{
 		if (!DroneTargeting.Instance.HasTarget())
 			return;
 
 		// If the user guessed right, advance to the next phase
-		if (higher)
-		{
-			++m_currentPhase;
+	
 
-			if (m_currentPhase > kNumPhases)
-			{
-				// We've finished all the phases, so erase the bug.
-				DroneTargeting.Instance.DestroyCurrentTarget();
+		++m_currentPhase;
 
-				m_currentPhase = 0;
-			}
-		}
-		// If the user was wrong, reset to phase 1
-		else
+		if (m_currentPhase > kNumPhases)
 		{
+			// We've finished all the phases, so erase the bug.
+			DroneTargeting.Instance.DestroyCurrentTarget();
+
 			m_currentPhase = 0;
+			//reset the list for next drone
+			CountSortList ();
 		}
+
 
 		if (OnPhaseChanged != null)
 			OnPhaseChanged(m_currentPhase);
