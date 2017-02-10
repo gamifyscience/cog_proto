@@ -46,13 +46,13 @@ public class CountSortManager : MonoBehaviour {
 	}
 
 	public void testDecoder(){
-
+		
 		if (!DroneTargeting.Instance.HasTarget ())
 			return;
 
 
 		//repop value with next number if the order is correct
-		// TODO there is a hack here to set countvalue to a number that can incriment
+		// TODO there is a hack here that set countvalue position +1 so it can be incremented
 		int myPosition = HiLoManager.CountOrder;
 		var ListManager = HiLoManager.Instance;
 
@@ -63,7 +63,7 @@ public class CountSortManager : MonoBehaviour {
 			HiLoManager.CountOrder = myPosition + 1;
 			myvalue	= testvalue;
 			m_textLabel.text = myvalue.ToString();
-			HiLoManager.Instance.ProcessPlayerSelect(true);
+			HiLoManager.Instance.ProcessPlayerSelect();
 		}
 	}
 

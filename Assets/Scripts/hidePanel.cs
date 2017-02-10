@@ -15,21 +15,31 @@ public class hidePanel : MonoBehaviour {
 
 		msManager.StartListening ("Targeted", Targeted);
 		msManager.StartListening ("Untargeted", Untargeted);
-
+		//msManager.StartListening ("BarelyTargeted", BarelyTargeted);
 	}
 
+	void Start()
+	{
+		if (!DroneTargeting.Instance.HasTarget ())
+			Untargeted ();
+	}
 
 	public void Targeted()
 	{
-		this.panel.SetActive (true);
+		if (this.panel.activeSelf == false) {
 
-			//if (DroneTargeting.Instance.HasTarget ())
+			this.panel.SetActive (true);
 
-		Button thisBtn = btn.GetComponent<Button>();
-		thisBtn.onClick.Invoke ();
-			print ("you pressed that button = magic");
-
+			Button thisBtn = btn.GetComponent<Button> ();
+			thisBtn.onClick.Invoke ();
+		}
 	}
+
+	public void BarelyTargeted()
+	{
+		//this.panel.SetActive (false);
+	}
+
 
 	public void Untargeted()
 	{
@@ -38,9 +48,7 @@ public class hidePanel : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		print ("updating UI");
-		if (!DroneTargeting.Instance.HasTarget ())
-			Untargeted ();
+		
 	}
 
 }
