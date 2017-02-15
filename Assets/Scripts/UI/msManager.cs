@@ -77,7 +77,7 @@ public class msManager : MonoBehaviour
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
             thisEvent.Invoke();
-            Debug.Log("I heard you say " + eventName);
+           // Debug.Log("I heard you say " + eventName);
         }
         else
         {

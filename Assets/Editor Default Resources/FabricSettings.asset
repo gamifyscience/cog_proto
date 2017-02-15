@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Name: FabricSettings
   m_EditorClassIdentifier: 
   email: eboyer@sandboks.com
-  rawToken: '{"access_token":"aed4e3a72ec36ce9ab2ace15be652ab63bea27113e3222f5c9e4b298cba2cdbc","refresh_token":"f3154d17961d94b4f395c2022fe38fd9af122d2cb8deea5db328a6e29ab3452f","token_type":"bearer","expires_in":86400}'
+  rawToken: '{"access_token":"da3c61b0b4b772eccab2568444fe11b9fffea97edab6c77688f2496228124f16","refresh_token":"250abdbf67c5a92838fd2074e4a851d1cd221daa4df664e528a6c843fba79494","token_type":"bearer","expires_in":86400}'
   organization:
-    Name: 
-    Id: 
-    ApiKey: 
-    BuildSecret: 
-  iconUrl: https://s3.amazonaws.com/assets.crashlytics.com/production/project/6026104/project_icon/2598490/icon.png
-  dashboardUrl: https://www.fabric.io/hardscience/ios/apps/com.hardscience.agentone
+    Name: HardScience
+    Id: 57bf29adfe618aadf000004a
+    ApiKey: e7192241e24550f9347031b12bb7abb5a3f0b50b
+    BuildSecret: 2ad01f2b084603fdfa385ce80e80576889bbee0b6298f211d49bbe8dcf57f801
+  iconUrl: https://s3.amazonaws.com/assets.crashlytics.com/production/project/6173754/project_icon/2721278/icon.png
+  dashboardUrl: https://www.fabric.io/hardscience/ios/apps/com.gamify.agentone
   initialization: 0
   flowSequence: 0
   conflict: 
@@ -31,7 +31,7 @@ MonoBehaviour:
     Enabled: 1
     Meta:
     - Key: ConfiguredTimestamp
-      Value: 1483938267
+      Value: 1486852179
       Platform: 
     - Key: Dependencies
       Value: '[{"name":"Crashlytics-Android","version":"2.6.3"},{"name":"Crashlytics-Core-Android","version":"2.3.12"},{"name":"Fabric-Android","version":"1.3.14"},{"name":"Answers-Android","version":"1.3.10"},{"name":"Beta-Android","version":"1.1.4"},{"name":"Crashlytics-iOS","version":"3.8.3"},{"name":"Crashlytics-Wrapper-iOS","version":"0.0.0"},{"name":"Crashlytics-Wrapper-Android","version":"0.0.0"}]'

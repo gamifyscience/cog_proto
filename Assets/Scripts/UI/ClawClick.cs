@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ClawClick : MonoBehaviour {
 
 	public GameObject Claw;
 	public Animator Claw_a;
+
+	public Slider clawSlider;
+
 	//public Animation Claw_anim;
 
 	public float threshhold;
@@ -42,5 +46,7 @@ public class ClawClick : MonoBehaviour {
 	public void SpawnBox() 
 	{ 
 		Claw_a.SetTrigger("Retract"); 
+		// reset the slider UI so the player doesn't have to do it manually
+		clawSlider.value = 0;
 	}
 }

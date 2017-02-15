@@ -9,8 +9,8 @@ public class DroneSpawner : MonoBehaviour
     public int kMaxDroneCount = 6;
 
     // These define how far away from the camera the drones can spawn.
-    public float kMinDroneDistance = 10f;
-    public float kMaxDroneDistance = 20f;
+    public float kMinDroneDistance = 25f;
+    public float kMaxDroneDistance = 50f;
 
     private void Awake()
     {

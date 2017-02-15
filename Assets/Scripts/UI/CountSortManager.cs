@@ -67,17 +67,6 @@ public class CountSortManager : MonoBehaviour {
 		}
 	}
 
-
-/*	private void Targeted()
-	{
-		//if (DroneTargeting.Instance.HasTarget ())
-			
-			Button thisBtn = btn.GetComponent<Button>();
-			thisBtn.onClick.Invoke ();
-			print ("you pressed that button = magic");
-
-	} */
-
 	private void BarelyTargeted()
 	{
 		

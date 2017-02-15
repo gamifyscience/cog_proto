@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PickupItem : MonoBehaviour
 {
-
+	//public static PickupItem Instance { get; private set; }
     public bool is_bomb;
     public bool itemGrabbed;
     public string Name;
@@ -72,7 +72,7 @@ public class PickupItem : MonoBehaviour
     void Inattention()
     {
         //We forgot to get this one, destroy it!
-        Destroy(gameObject);
+		Destroy(gameObject, 0.1f);
     }
 
     void Pass()
@@ -95,7 +95,7 @@ public class PickupItem : MonoBehaviour
 
         itemGrabbed = true;
 
-        print("you tapped " + this.name);
+        print("you grabbed " + this.name);
 
         if (this.is_bomb != true)
             msManager.TriggerEvent("GrabTime");

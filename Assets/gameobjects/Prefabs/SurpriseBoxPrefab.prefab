@@ -497,18 +497,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49231762288874fdba750c7f7d044bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_time: 0.4
-  wait_time: 0.8
-  SpawnedBox_a: {fileID: 0}
   SpawnBox_anim: {fileID: 0}
-  bombs_and_veggies:
-  - {fileID: 104024, guid: 1415e6bd5e441475091f684078eec12a, type: 2}
-  - {fileID: 186924, guid: 19e0114b12e9c42b1a857d9cac720ba0, type: 2}
-  pickup_position: {fileID: 0}
+  pickup_position: {fileID: 406070}
   middle_position: {fileID: 0}
   end_position: {fileID: 0}
   m_spawner: {fileID: 0}
-  spawned_item: {fileID: 0}
+  move_time: 0.4
+  wait_time: 0.8
 --- !u!137 &13787768
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

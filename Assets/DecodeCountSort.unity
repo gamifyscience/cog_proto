@@ -1895,7 +1895,7 @@ GameObject:
   - component: {fileID: 854400124}
   - component: {fileID: 854400125}
   m_Layer: 0
-  m_Name: BugSpawner
+  m_Name: DroneSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1929,8 +1929,8 @@ MonoBehaviour:
     type: 2}
   kMinDroneCount: 4
   kMaxDroneCount: 6
-  kMinDroneDistance: 15
-  kMaxDroneDistance: 45
+  kMinDroneDistance: 25
+  kMaxDroneDistance: 50
 --- !u!224 &919099713 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224425050902520574, guid: 9f6c0821e3091244da310b0b178a9f94,

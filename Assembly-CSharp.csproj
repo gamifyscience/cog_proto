@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\PickupItem.cs" />
      <Compile Include="Assets\Scripts\RandomUtils.cs" />
      <Compile Include="Assets\Scripts\RealCamera.cs" />
+     <Compile Include="Assets\Scripts\RealCameraSwitch.cs" />
      <Compile Include="Assets\Scripts\SimpleSmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\SurpriseBox.cs" />
      <Compile Include="Assets\Scripts\UI\ClawClick.cs" />
