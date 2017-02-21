@@ -27,10 +27,10 @@ public class HiLoManager : MonoBehaviour
     private int m_currentPhase = 0;
 
 	// COUNTSORTGAME These are the ordered lists for the coundown array 
-	private static List<int> firstset = new List<int>() {25,24,23,22,21,20,19,18,17,16,15,14};
+	private static List<int> firstset = new List<int>() {25,24,23,22,21,20,19,18,17,16};
 //	private static List<string> secondset = new List<int>() {"A","B","C","D","E","F","G","H","I","J","K","L"};
-	private static List<int> orderset = new List<int>() {25,24,23,22,21,20,19,18,17,16,15,14};
-	private static List<int> nextset  = new List<int>() {13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2};
+	private static List<int> orderset = new List<int>() {25,24,23,22,21,20,19,18,17,16};
+	private static List<int> nextset  = new List<int>() {15,14,13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2};
 	public static int CountOrder;
 
     private void Awake()
