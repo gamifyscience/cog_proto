@@ -92,7 +92,7 @@ public class BoxSpawner : MonoBehaviour {
 				Quaternion.identity
 			) as GameObject;
 		
-		spawned_item.transform.eulerAngles = new Vector3 (-90,0,0);
+		spawned_item.transform.eulerAngles = new Vector3 (0,0,0);
 		//spawned_box is the parent GObj for the spawned item after we intst on the pickup point.
 		//spawned_item.transform.parent = spawned_box.transform; //boxTransform);
 		//spawned_item.transform.SetParent(spawned_box.transform); //boxTransform);

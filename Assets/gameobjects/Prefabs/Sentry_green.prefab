@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33394173499986108}
   - component: {fileID: 23195566026593400}
   - component: {fileID: 114321552471473592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sentry_green
   m_TagString: Drone
   m_Icon: {fileID: 0}

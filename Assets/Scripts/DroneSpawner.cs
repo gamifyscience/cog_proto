@@ -10,7 +10,9 @@ public class DroneSpawner : MonoBehaviour
 
     // These define how far away from the camera the drones can spawn.
     public float kMinDroneDistance = 25f;
-    public float kMaxDroneDistance = 50f;
+    public float kMaxDroneDistance = 60f;
+	public float kMinDroneHeight = -15f;
+	public float kMaxDroneHeight = 25f;
 
     private void Awake()
     {
@@ -20,23 +22,27 @@ public class DroneSpawner : MonoBehaviour
         // Spawn some drones near the world origin.
         for (int i = 0; i < numDrones; ++i)
         {
+			//float thisz = Random.Range (kMinDroneDistance, kMaxDroneDistance);
+			float thisy = Random.Range (kMinDroneHeight, kMaxDroneHeight);
+
             // TODO: ensure that drones can't spawn too close to one another.
-            Vector3 pos = GetRandomDronePosition(camPos, kMinDroneDistance, kMaxDroneDistance);
+			Vector3 pos = GetRandomDronePosition(camPos, thisy, kMinDroneDistance, kMaxDroneDistance );
 
             SpawnDrone(pos);
         }
     }
 
     // minDistance and maxDistance signify the range of possible distances from the origin.
-    private static Vector3 GetRandomDronePosition(Vector3 origin, float minDistance, float maxDistance)
+    private static Vector3 GetRandomDronePosition(Vector3 origin, float yValue, float minDistance, float maxDistance)
     {
         // Get a random direction vector
         Vector3 direction = RandomUtils.GetNormalizedVector();
-
         // Extend the vector out to a random distance
-        direction *= Random.Range(minDistance, maxDistance);
 
+        direction *= Random.Range(minDistance, maxDistance);
         // Start from the specified origin
+		direction[1] = yValue;
+		print (direction);
         return direction + origin;
     }
 

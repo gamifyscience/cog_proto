@@ -84,7 +84,6 @@ public class PickupItem : MonoBehaviour
     void Explode()
     {
         msManager.TriggerEvent("ResetScore");
-        ParticleSystem splat = GetComponent<ParticleSystem>();
         splat.Play();
         Destroy(gameObject, splat.main.duration);
     }

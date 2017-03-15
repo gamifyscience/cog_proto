@@ -45,7 +45,7 @@ public class DroneReticule : MonoBehaviour
             break;
 		case DroneTargeting.eTargetingState.BarelyTargeted:
 			material.color = Color.blue;
-			//msManager.TriggerEvent ("BarelyTargeted");
+			msManager.TriggerEvent ("BarelyTargeted");
             break;
 		case DroneTargeting.eTargetingState.Untargeted:
 			material.color = Color.red;

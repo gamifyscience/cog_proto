@@ -38,7 +38,7 @@ ModelImporter:
     400028: ClawArmature
     400030: ClawHandle.001
     4300000: ClawHandle.001
-    7400000: ClawArmature|ClawArmatureAction.001
+    7400000: ClawArmature|ClawArmatureAction001
     7400002: ClawArmature|ClosedClaw
     9500000: //RootNode
     13700000: ClawHandle.001
@@ -49,7 +49,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -62,7 +62,127 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ClawArmature|ClawArmatureAction001
+      takeName: ClawArmature|ClawArmatureAction.001
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ClawArmature
+        weight: 1
+      - path: ClawArmature/Bone
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Bone.005_end
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008/Bone.009
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.010_end
+        weight: 1
+      - path: ClawHandle.001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ClawArmature|ClosedClaw
+      takeName: ClawArmature|ClosedClaw
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ClawArmature
+        weight: 1
+      - path: ClawArmature/Bone
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005
+        weight: 1
+      - path: ClawArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005/Bone.005_end
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008/Bone.009
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010
+        weight: 1
+      - path: ClawArmature/Bone/Bone.006/Bone.007/Bone.008/Bone.009/Bone.010/Bone.010_end
+        weight: 1
+      - path: ClawHandle.001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -88,6 +208,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -98,7 +219,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

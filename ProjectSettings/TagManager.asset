@@ -19,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Drones
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Drones
+    uniqueID: 3205083517
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

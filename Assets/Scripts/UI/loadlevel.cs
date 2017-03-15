@@ -23,4 +23,7 @@ public class loadlevel : MonoBehaviour {
 		SceneManager.LoadScene ("Menu", LoadSceneMode.Single);
 	}
 
+	public void ButtonMenuClickGyroTest() {
+		SceneManager.LoadScene ("CamGyroTest", LoadSceneMode.Single);
+	}
 }
