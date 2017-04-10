@@ -1341,7 +1341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22462108, guid: 261de0e88b4234a9385e07a11efbf70e, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 102
+      value: -176.2
       objectReference: {fileID: 0}
     - target: {fileID: 22462108, guid: 261de0e88b4234a9385e07a11efbf70e, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1493,7 +1493,7 @@ Prefab:
       objectReference: {fileID: 476607162}
     - target: {fileID: 11410066, guid: 261de0e88b4234a9385e07a11efbf70e, type: 2}
       propertyPath: m_Text
-      value: SPAWN BOX
+      value: NEXT BOX
       objectReference: {fileID: 0}
     - target: {fileID: 22462108, guid: 261de0e88b4234a9385e07a11efbf70e, type: 2}
       propertyPath: m_LocalScale.x

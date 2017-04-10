@@ -58,10 +58,11 @@ public class ARCameraController : MonoBehaviour
 
     void Update()
     {
-		
-        if (m_isUsingGyro)
+		Quaternion rotation = new Quaternion (Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
+		this.transform.localRotation = rotation;
+		/* if (m_isUsingGyro)
         {
-		//*camParent.transform.eulerAngles = Vector3(90,90,0);
+		camParent.transform.eulerAngles = Vector3(90,90,0);
 			print("USING GYRO");
 			Quaternion rotation = new Quaternion();
 
@@ -72,7 +73,8 @@ public class ARCameraController : MonoBehaviour
 			
 			Quaternion rotation = new Quaternion (Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
 			this.transform.localRotation = rotation;
-		}
+		} 
+		*/
     }
 /*
 	void OnGUI()

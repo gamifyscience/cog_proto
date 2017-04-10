@@ -30,6 +30,7 @@ public class DroneReticule : MonoBehaviour
     private void OnDestroy()
     {
         DroneTargeting.Instance.OnTargetingChanged -= OnTargetingChanged;
+		msManager.TriggerEvent ("Untargeted");
     }
 
     private void OnTargetingChanged(GameObject oldTarget, GameObject newTarget, DroneTargeting.eTargetingState oldState, DroneTargeting.eTargetingState newState)

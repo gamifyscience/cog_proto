@@ -19,5 +19,5 @@ EditorBuildSettings:
     path: Assets/Decoder.unity
   - enabled: 0
     path: Assets/GameScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/CamGyroTest.unity

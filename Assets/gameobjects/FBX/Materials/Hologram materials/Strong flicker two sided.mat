@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Strong flicker two sided
   m_Shader: {fileID: 4800000, guid: 002f6eab9ba9b994d8eec7af12c232ac, type: 3}
-  m_ShaderKeywords: SCAN2_OFF
-  m_LightmapFlags: 5
+  m_ShaderKeywords: SCAN2_OFF _EMISSION
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -50,7 +50,7 @@ Material:
       second:
         m_Texture: {fileID: 2800000, guid: f6fbdc160d1c3434784ba77e623a8c85, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: -5, y: 10}
+        m_Offset: {x: -4.28, y: 10}
     - first:
         name: _MetallicGlossMap
       second:
@@ -110,7 +110,7 @@ Material:
       second:
         m_Texture: {fileID: 2800000, guid: b9f945c9d4293bf4da7d4a00989d0a31, type: 3}
         m_Scale: {x: 2, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: -7.37, y: -1.44}
     - first:
         name: _Scanlines
       second:
@@ -144,7 +144,7 @@ Material:
       second: 0
     - first:
         name: _Brightness
-      second: 3.81
+      second: 4
     - first:
         name: _BumpScale
       second: 1
@@ -159,13 +159,19 @@ Material:
       second: 0
     - first:
         name: _Fade
-      second: 0.028
+      second: 0.173
     - first:
         name: _Fresnel
       second: 2
     - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
         name: _Glossiness
       second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
     - first:
         name: _Metallic
       second: 0
@@ -180,19 +186,25 @@ Material:
       second: 0.02
     - first:
         name: _RimFalloff
-      second: 0.833
+      second: 0.704
     - first:
         name: _RimStrenght
-      second: 1.54
+      second: 0.3
     - first:
         name: _ScanStr
-      second: 0.877
+      second: 1
     - first:
         name: _ScanStr2
-      second: 0.396
+      second: 0.727
     - first:
         name: _Shading
       second: 0.25
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
     - first:
         name: _SrcBlend
       second: 1
@@ -214,7 +226,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _RimColor
-      second: {r: 0.0864511, g: 0.796441, b: 0.9044118, a: 1}
+      second: {r: 1, g: 0.76551723, b: 0, a: 1}
     - first:
         name: _ScanlineColor
       second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
