@@ -121,6 +121,7 @@
      <Compile Include="Assets\Fabric\Kits\Crashlytics\Editor\GUI\View\DashboardPage.cs" />
      <Compile Include="Assets\Fabric\Kits\Crashlytics\Editor\Info.cs" />
      <Compile Include="Assets\Fabric\Kits\Crashlytics\Editor\Postbuild\CrashlyticsPostBuildiOS.cs" />
+     <None Include="Assets\Images\NewImageEffectShader.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />

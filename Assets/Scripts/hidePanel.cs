@@ -16,6 +16,10 @@ public class hidePanel : MonoBehaviour {
 		msManager.StartListening ("Targeted", Targeted);
 		msManager.StartListening ("Untargeted", Untargeted);
 		//msManager.StartListening ("BarelyTargeted", BarelyTargeted);
+
+		//setup the number list so it isn't empty
+		Button thisBtn = btn.GetComponent<Button> ();
+		thisBtn.onClick.Invoke ();
 	}
 
 	void Start()
@@ -44,11 +48,6 @@ public class hidePanel : MonoBehaviour {
 	public void Untargeted()
 	{
 		this.panel.SetActive (false);
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 }

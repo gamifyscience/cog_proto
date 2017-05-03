@@ -4,9 +4,8 @@ using UnityEngine.UI;
 
 public class SurpriseBox : MonoBehaviour {
 
-	public float move_time = 0.4f;
-	public float wait_time = 0.8f;
-	public Animator SpawnedBox_a;
+//	public static SurpriseBox Instance { get; private set; }
+	//public Animator SpawnedBox_a;
 	public Animation SpawnBox_anim;
 	public GameObject[] bombs_and_veggies;
 	public Transform pickup_position;
@@ -17,6 +16,8 @@ public class SurpriseBox : MonoBehaviour {
 
 	public GameObject spawned_item;
 
+	public float move_time = 0.4f;
+	public float wait_time = 0.8f;
     // How long should the box wait in place before opening? (We'll choose a random
     // number between these two values.)
     private const float kMinPauseBeforeOpen = 0.1f;
@@ -28,7 +29,7 @@ public class SurpriseBox : MonoBehaviour {
 	}
 
 
-	IEnumerator BoxRoutine  () 
+	IEnumerator BoxRoutine () 
 	{
 		// find wait and end points
 		Animator SpawnedBox_a = Animator.FindObjectOfType<Animator>();
@@ -44,12 +45,14 @@ public class SurpriseBox : MonoBehaviour {
 		// wait until the box reaches the center of the screen
 		yield return new WaitForSeconds(move_time);
 
-        // Wait a random amount of time before opening the box
-        float waitTime = Random.Range(kMinPauseBeforeOpen, kMaxPauseBeforeOpen);
-        yield return new WaitForSeconds(waitTime);
+        // dalay a random amount of time before opening the box
+        float delay_time = Random.Range(kMinPauseBeforeOpen, kMaxPauseBeforeOpen);
+		yield return new WaitForSeconds(delay_time);
         
         // open the box and spawn an item from the array
-        m_spawner.SpawnItem();
+		m_spawner.SpawnItem();
+
+
         SpawnedBox_a.SetTrigger("openbox");
 
 		// pause to let you grab the item
@@ -86,7 +89,12 @@ public class SurpriseBox : MonoBehaviour {
 
 	void movetoExit(Transform end_position, float move_time)
 	{
-		
+		Debug.LogError (end_position.transform + " end, " + this.transform.position + "start");
+		/*while this.gameObject.transform != end_position)
+		{
+
+			transform.position = Vector3.Lerp(transform.position, waypoint.position, speed /150);
+	*/
 		iTween.MoveTo(
 			this.gameObject, 
 			iTween.Hash("position", end_position, 

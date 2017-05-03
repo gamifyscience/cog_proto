@@ -64,6 +64,7 @@
      <Compile Include="Assets\Fabric\Runtime\Internal\Impl.cs" />
      <Compile Include="Assets\Fabric\ThirdParty\MiniJSON.cs" />
      <Compile Include="Assets\Scripts\ARCameraController.cs" />
+     <Compile Include="Assets\Scripts\ARCameraTexture.cs" />
      <Compile Include="Assets\Scripts\Avatar.cs" />
      <Compile Include="Assets\Scripts\BobFloat.cs" />
      <Compile Include="Assets\Scripts\BoxSpawner.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scripts\PickupItem.cs" />
      <Compile Include="Assets\Scripts\RandomUtils.cs" />
      <Compile Include="Assets\Scripts\RealCamera.cs" />
+     <Compile Include="Assets\Scripts\RealCameraSwitch.cs" />
      <Compile Include="Assets\Scripts\SimpleSmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\SurpriseBox.cs" />
      <Compile Include="Assets\Scripts\UI\ClawClick.cs" />
@@ -84,14 +86,18 @@
      <Compile Include="Assets\Scripts\UI\NumbersLeftDisplay.cs" />
      <Compile Include="Assets\Scripts\UI\buttonGo.cs" />
      <Compile Include="Assets\Scripts\UI\buttonStop.cs" />
+     <Compile Include="Assets\Scripts\UI\hideParticle.cs" />
      <Compile Include="Assets\Scripts\UI\loadlevel.cs" />
      <Compile Include="Assets\Scripts\UI\msManager.cs" />
      <Compile Include="Assets\Scripts\UI\msPressListener.cs" />
      <Compile Include="Assets\Scripts\UI\msScoreListener.cs" />
      <Compile Include="Assets\Scripts\UI\sortnumbers.cs" />
+     <Compile Include="Assets\Scripts\WebCamPhone.cs" />
      <Compile Include="Assets\Scripts\aiClawClick.cs" />
+     <Compile Include="Assets\Scripts\cameraGyro.cs" />
      <Compile Include="Assets\Scripts\hidePanel.cs" />
      <Compile Include="Assets\Scripts\hitthis.cs" />
+     <None Include="Assets\Images\NewImageEffectShader.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />

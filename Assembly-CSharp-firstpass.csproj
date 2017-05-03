@@ -50,6 +50,7 @@
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <None Include="Assets\Images\NewImageEffectShader.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />

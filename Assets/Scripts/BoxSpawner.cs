@@ -5,18 +5,16 @@ using System.Collections;
 
 public class BoxSpawner : MonoBehaviour {
 
-	//public static BoxSpawner instance;
+	public static BoxSpawner Instance { get; private set; }
 
 	//value from slider for spawnertrigger
 	public float threshhold;
-	//Environemtn effects
-	public Animator Claw_a;
-	public GameObject Claw;
 
 	//Box
-	public static GameObject spawned_box;
 	public Transform spawn_point;
 	public GameObject SurpriseBox;
+	public static GameObject spawned_box;
+
 
 	//Items
 	public GameObject[] bombs_and_veggies;	//list of items we can spawn
@@ -24,6 +22,7 @@ public class BoxSpawner : MonoBehaviour {
 	public Transform pickup_position;		//where the box will open and show the item
 	public float probability = 0.3f; 		//chance of getting an unwanted item
 	private PickupItem m_spawnItem;			//object script of the current item
+	//public GameObject spawned_item;
 
 	void OnEnable ()
 	{
@@ -44,6 +43,7 @@ public class BoxSpawner : MonoBehaviour {
 	{
         SpawnBoxRoutine();
     }
+
     public void Grab()
     {
     }
@@ -91,8 +91,12 @@ public class BoxSpawner : MonoBehaviour {
 				pickup_point.position,
 				Quaternion.identity
 			) as GameObject;
-
+		
 		spawned_item.transform.eulerAngles = new Vector3 (0,0,0);
+		//spawned_box is the parent GObj for the spawned item after we intst on the pickup point.
+		//spawned_item.transform.parent = spawned_box.transform; //boxTransform);
+		//spawned_item.transform.SetParent(spawned_box.transform); //boxTransform);
+
 		msManager.TriggerEvent("ItemSpawned");
 	}
 
@@ -111,7 +115,8 @@ public class BoxSpawner : MonoBehaviour {
 
     void Update () 
 	{
-
+		//if (spawned_item != null)
+		//spawned_item.transform.parent = SurpriseBox.transform; //boxTransform);
 	}
 
 }
