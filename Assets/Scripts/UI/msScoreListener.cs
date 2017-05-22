@@ -92,11 +92,13 @@ public class msScoreListener : MonoBehaviour
 
     void NewRound()
     {
+		AnswerCustom.LogDroneJamInterval ("EspiangeRound", "Time", score);
         newScore = 0.0f;
         boxCount = 0;
         ++round;
         DisplayScore();
         print("Round: " + round);
+
     }
 
 

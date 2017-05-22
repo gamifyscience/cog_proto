@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Name: FabricSettings
   m_EditorClassIdentifier: 
   email: eboyer@sandboks.com
-  rawToken: '{"access_token":"485fad6dde7ad08361367691b612569b88186bc56711da46b3c22fc85b21d479","refresh_token":"185588e01b96211ea39a96738144e5e317a0c7bcb4ad350f77ebe7f27fb4d323","token_type":"bearer","expires_in":86400}'
+  rawToken: '{"access_token":"c080a1d9b7c65880c38704145fc98e0f5acaae27e9a6b02d0a5932c19765fc16","refresh_token":"dc69765ea05b4f35a69984bbb4ec2a07f6272da0e96444e723ac023d39e677ca","token_type":"bearer","expires_in":86400}'
   organization:
     Name: Gamify, Inc.
     Id: 57bf29adfe618aadf000004a
     ApiKey: e7192241e24550f9347031b12bb7abb5a3f0b50b
     BuildSecret: 2ad01f2b084603fdfa385ce80e80576889bbee0b6298f211d49bbe8dcf57f801
-  iconUrl: 
-  dashboardUrl: 
+  iconUrl: https://s3.amazonaws.com/assets.crashlytics.com/production/project/6375045/project_icon/2884733/icon.png
+  dashboardUrl: https://www.fabric.io/hardscience/ios/apps/com.gamify.agentone
   initialization: 0
   flowSequence: 0
   conflict: 
   kit: 
   installedKits:
   - Name: Crashlytics
-    InstallationStatus: 1
-    Installed: 0
+    InstallationStatus: 2
+    Installed: 1
     Enabled: 1
     Meta:
     - Key: ConfiguredTimestamp
