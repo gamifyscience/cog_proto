@@ -33,6 +33,9 @@ public class HiLoManager : MonoBehaviour
 	private static List<int> nextset  = new List<int>() {15,14,13,12,11,10, 9, 8, 7, 6, 5, 4, 3, 2};
 	public static int CountOrder;
 
+	public float RoundStartTime;
+	public float RoundEndTime;
+
     private void Awake()
     {
 		//SceneName = "DecoderHiLo";
@@ -64,9 +67,12 @@ public class HiLoManager : MonoBehaviour
 		//count sort random array
 		for (int i = 0; i < firstset.Count; i++) {
 			int mixedset = firstset[i];
-			int randomIndex = Random.Range(i, firstset.Count);
+			int randomIndex = UnityEngine.Random.Range(i, firstset.Count);
 			firstset[i] = firstset[randomIndex];
 			firstset[randomIndex] = mixedset;
+
+			//start the session timer for this round
+			RoundStartTime = Time.time;
 		}
 
 		//TODO: mix up the gameplay with alternating lists to sort.
@@ -84,6 +90,7 @@ public class HiLoManager : MonoBehaviour
 	{
 		//if(intScore == 0)
 		return firstset [indexValue];
+
 	}
 
 	public static int OnGetValue (int testValue, int testPosition)
@@ -152,6 +159,10 @@ public class HiLoManager : MonoBehaviour
 			DroneTargeting.Instance.DestroyCurrentTarget();
 
 			m_currentPhase = 0;
+			RoundEndTime = Time.time;
+			float RoundTime = RoundEndTime - RoundStartTime;
+			AnswerCustom.LogDroneJamInterval ("JameDroneTime", "Drone Session Time", RoundTime);
+			print ("Time Touch complete Phase" + RoundTime);
 			//reset the list for next drone
 			CountSortList ();
 		}

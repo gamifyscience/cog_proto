@@ -42,7 +42,7 @@ public class DroneSpawner : MonoBehaviour
         direction *= Random.Range(minDistance, maxDistance);
         // Start from the specified origin
 		direction[1] = yValue;
-		print (direction);
+		//print (direction);
         return direction + origin;
     }
 
