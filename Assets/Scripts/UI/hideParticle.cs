@@ -19,6 +19,7 @@ public class hideParticle : MonoBehaviour {
 		//setup the particle system class
 		ps = GetComponent<ParticleSystem>();
 		ma = ps.main; //to control settings
+		ma.maxParticles = 4;
 	}
 
 	void Start()
@@ -36,13 +37,14 @@ public class hideParticle : MonoBehaviour {
 
 	public void BarelyTargeted()
 	{
-		ma.maxParticles = 8;
+		ma.maxParticles = 4;
 	}
 
 
 	public void Untargeted()
 	{
 		//ps.Stop();
+		ma.maxParticles = 1;
 	}
 
 }

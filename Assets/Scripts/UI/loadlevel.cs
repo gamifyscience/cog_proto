@@ -5,8 +5,6 @@ using Fabric.Answers;
 
 public class loadlevel : MonoBehaviour {
 
-
-
 	public void  ButtonClickQuit () {
 		Application.Quit ();
 	}
@@ -24,6 +22,11 @@ public class loadlevel : MonoBehaviour {
 
 		Answers.LogLevelStart ( "DecodeCountSort", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
 		SceneManager.LoadScene ("DecodeCountSort", LoadSceneMode.Single);
+	}
+	public void ButtonClickMorrisMaze1 () {
+
+		Answers.LogLevelStart ( "MazeRoom1", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
+		SceneManager.LoadScene ("MazeRoom1", LoadSceneMode.Single);
 	}
 
 	public void ButtonMenu() {
