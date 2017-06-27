@@ -11,23 +11,21 @@ public class loadlevel : MonoBehaviour {
 
 	public void ButtonClickGoNoGo1 () {
 		
-		Answers.LogLevelStart ( "GoNoGoEspianage", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
+		Answers.LogLevelStart ( "GoNoGo", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
 		SceneManager.LoadSceneAsync ("GoNoGoEspianage", LoadSceneMode.Single);
 	}
 
-	public void ButtonClickDecoder1 () {
-		SceneManager.LoadScene ("DecoderNBack", LoadSceneMode.Single);
-	}
 	public void ButtonClickDecoder2 () {
 
-		Answers.LogLevelStart ( "DecodeCountSort", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
+		Answers.LogLevelStart ( "WorkingMemory", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
 		SceneManager.LoadScene ("DecodeCountSort", LoadSceneMode.Single);
 	}
 	public void ButtonClickMorrisMaze1 () {
 
-		Answers.LogLevelStart ( "MazeRoom1", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
+		Answers.LogLevelStart ( "MorrisMaze", new Dictionary<string, object> { {"PlayerLevel", PlayerData.currentLevel} } );
 		SceneManager.LoadScene ("MazeRoom1", LoadSceneMode.Single);
 	}
+
 
 	public void ButtonMenu() {
 		
@@ -35,9 +33,17 @@ public class loadlevel : MonoBehaviour {
 
 	}
 
+	/*
 	public void ButtonMenuClickGyroTest() {
 		SceneManager.LoadScene ("CamGyroTest", LoadSceneMode.Single);
 	}
 
+
+
+	public void ButtonClickDecoder1 () {
+		SceneManager.LoadScene ("DecoderNBack", LoadSceneMode.Single);
+	}
+
+*/
 
 }

@@ -26,6 +26,11 @@ public class AnswerCustom : MonoBehaviour {
 		Answers.LogCustom (JamInterval, new Dictionary<string, object> { {Attribute, Detail} } );
 	}
 
+	public static void LogMazeEscapeInterval (string EscapeInterval, string Attribute, object Detail) {
+
+		Answers.LogCustom (EscapeInterval, new Dictionary<string, object> { {Attribute, Detail} } );
+	}
+
 	public static void LogDroneJamError (string JamError, string Attribute1, object Detail1, string Attribute2, object Detail2) {
 
 		Answers.LogCustom (JamError, new Dictionary<string, object> { 
