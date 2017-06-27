@@ -91,16 +91,16 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Analytics">
- <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Fabric/Managed/Analytics.dll</HintPath>
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Fabric/Managed/Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Validator">
- <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Fabric/Managed/Validator.dll</HintPath>
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Fabric/Managed/Validator.dll</HintPath>
  </Reference>
  <Reference Include="OSCsharp">
- <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Scripts/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll</HintPath>
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Scripts/UI/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll</HintPath>
  </Reference>
  <Reference Include="TUIOsharp">
- <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Scripts/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Scripts/UI/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
