@@ -52,6 +52,7 @@
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
      <None Include="Assets\Images\NewImageEffectShader.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
+     <None Include="Assets\Materials\Shaders\SciFiHologramShader.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />
      <None Include="Assets\Plugins\Android\crashlytics-wrapper\AndroidManifest.xml" />
@@ -94,6 +95,12 @@
  </Reference>
  <Reference Include="Validator">
  <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Fabric/Managed/Validator.dll</HintPath>
+ </Reference>
+ <Reference Include="OSCsharp">
+ <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Scripts/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll</HintPath>
+ </Reference>
+ <Reference Include="TUIOsharp">
+ <HintPath>/Volumes/MacMini2 1/Projects/cog_proto1/Assets/Scripts/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
