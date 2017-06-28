@@ -11,8 +11,7 @@ public class PickupItem : MonoBehaviour
     public string Name;
     public int value;
     public int speed = 2;
-    public RaycastHit hit;
-    public Ray ray;
+
     public float startTime;
     public ParticleSystem splat;
     public Transform end_position;
@@ -34,12 +33,12 @@ public class PickupItem : MonoBehaviour
         msManager.StopListening("Grab", Grab);
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider target)
     {
-        if (col.GetComponent<Collider>().name == "SurpriseBoxPrefab")
+		if (target.GetComponent<Collider>().name == "SurpriseBoxPrefab")
         {
             Inattention();
-            print("your box hit the apple");
+            print("your claw hit the box");
         }
     }
 
@@ -107,33 +106,7 @@ public class PickupItem : MonoBehaviour
         {
             Pass(); //MoveItem();
         }
-
-        //We are not tapping anymore
-        /*
-    if (Input.GetMouseButtonDown(0)) 
-    {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast (ray, out hit))
-        if (hit.collider != null) {
-            //we tapped it now try to collide with it
-            msManager.TriggerEvent ("Grab");
-            itemGrabbed = true;
-            //hit.collider.enabled = false;
-            print ("you tapped " + hit.collider.name);
-        }
-        if ( this.is_bomb != true)
-            msManager.TriggerEvent ("GrabTime");
-
-        if(this.is_bomb)
-        {
-            Explode();
-        } else {
-            Pass (); //MoveItem();
-        }
-    }
-    */
+			
     }
 
 

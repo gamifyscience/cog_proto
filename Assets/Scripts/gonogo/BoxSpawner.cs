@@ -15,14 +15,13 @@ public class BoxSpawner : MonoBehaviour {
 	public GameObject SurpriseBox;
 	public static GameObject spawned_box;
 
-
 	//Items
-	public GameObject[] bombs_and_veggies;	//list of items we can spawn
+	public GameObject[] active_inactive;	//list of items we can spawn
 	public Transform pickup_point;			//target spawnpoint for the item
 	public Transform pickup_position;		//where the box will open and show the item
 	public float probability = 0.3f; 		//chance of getting an unwanted item
 	private PickupItem m_spawnItem;			//object script of the current item
-	//public GameObject spawned_item;
+
 
 	void OnEnable ()
 	{
@@ -63,6 +62,7 @@ public class BoxSpawner : MonoBehaviour {
 			Quaternion.identity
 		) as GameObject;
 		spawned_box.transform.eulerAngles = new Vector3 (0,0,0);
+
 	}
 
 
@@ -87,7 +87,7 @@ public class BoxSpawner : MonoBehaviour {
 
 		GameObject spawned_item = Instantiate 
 			(
-				bombs_and_veggies[n],
+				active_inactive[n],
 				pickup_point.position,
 				Quaternion.identity
 			) as GameObject;
