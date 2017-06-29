@@ -9,7 +9,7 @@ public class buttonGo : MonoBehaviour {
 
     private void Start()
     {
-        msManager.StartListening("DestroyBox", DestroyBox);
+       // msManager.StartListening("DestroyBox", DestroyBox);
     }
 
 	public void PressButtonGo () 
@@ -23,6 +23,6 @@ public class buttonGo : MonoBehaviour {
 
     void DestroyBox()
     {
-        ButtonGo.interactable = true;
+       // ButtonGo.interactable = true;
     }
 }

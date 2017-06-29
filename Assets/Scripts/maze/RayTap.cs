@@ -10,7 +10,6 @@ public class RayTap : MonoBehaviour {
 
 	RaycastHit hitInfo = new RaycastHit();
 	NavMeshAgent agent;
-	bool isNavActive;
 
 
 	//for the run animation times
@@ -23,7 +22,6 @@ public class RayTap : MonoBehaviour {
 
 	void Start() {
 		agent = GetComponent<NavMeshAgent>();
-		isNavActive = false; //we are not moving yet
 
 	}
 

@@ -74,7 +74,6 @@
      <Compile Include="Assets\Scripts\UI\7SegScoreboard\SetCurrentTime4Digits.cs" />
      <Compile Include="Assets\Scripts\UI\7SegScoreboard\SetCurrentTime6Digits.cs" />
      <Compile Include="Assets\Scripts\UI\7SegScoreboard\SetTimerCountUp.cs" />
-     <Compile Include="Assets\Scripts\UI\ClawClick.cs" />
      <Compile Include="Assets\Scripts\UI\CountSortManager.cs" />
      <Compile Include="Assets\Scripts\UI\DigitTimer.cs" />
      <Compile Include="Assets\Scripts\UI\HigherLowerButton.cs" />
@@ -181,6 +180,7 @@
      <Compile Include="Assets\Scripts\drone\hitthis.cs" />
      <Compile Include="Assets\Scripts\gonogo\Avatar.cs" />
      <Compile Include="Assets\Scripts\gonogo\BoxSpawner.cs" />
+     <Compile Include="Assets\Scripts\gonogo\ClawClick.cs" />
      <Compile Include="Assets\Scripts\gonogo\PickupItem.cs" />
      <Compile Include="Assets\Scripts\gonogo\SpawnMarker.cs" />
      <Compile Include="Assets\Scripts\gonogo\SurpriseBox.cs" />

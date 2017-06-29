@@ -52,7 +52,7 @@ public class PickupItem : MonoBehaviour
     {
         if (itemGrabbed == false)
         {
-            end_position = GameObject.Find("EndPoint").transform;
+           // end_position = GameObject.Find("EndPoint").transform;
             msManager.TriggerEvent("aiGrab");
             msManager.TriggerEvent("UpdateScore");
             //			iTween.MoveTo
@@ -63,7 +63,7 @@ public class PickupItem : MonoBehaviour
             //					"easetype", iTween.EaseType.linear, 
             //					"onComplete", "Inattention")
             //			);
-            Inattention();
+			// msManager.TriggerEvent("Inattention");
         }
     }
 
