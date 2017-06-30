@@ -17,21 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GoNoGoEspianage.unity
     guid: 6f35d8548e7c645389eebd9536eb0936
-  - enabled: 0
-    path: Assets/OLDSCENES/DecoderHiLo.unity
-    guid: bbad53c557fde4fa2a6ccd6fabe10238
-  - enabled: 0
-    path: Assets/OLDSCENES/DecoderNBack.unity
-    guid: 6915f8ad1ddf645108ce0898a8fcd98b
-  - enabled: 0
-    path: Assets/Decoder.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/GameScene.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/OLDSCENES/CamGyroTest.unity
-    guid: 3c9a8ba3cd8ba4ae7be31bd25e1413cd
-  - enabled: 0
-    path: Assets/Menu.unity
-    guid: d7b8afeadb9434ba69166186603acfc6
+

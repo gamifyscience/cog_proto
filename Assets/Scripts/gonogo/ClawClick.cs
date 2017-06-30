@@ -7,19 +7,18 @@ public class ClawClick : MonoBehaviour {
 
 	public GameObject Claw;
 	public Animator Claw_a;
-
 	public Slider clawSlider;
 
-	//public Animation Claw_anim;
 
 	public float threshhold;
 
 	// Use this for initialization
-	void OnEnable () {
+	private void OnEnable () {
 		msManager.StartListening ("Grab", Grab);
 		msManager.StartListening ("SpawnBox", SpawnBox);
-	}
 
+	}
+		
 	void Awake ()
 	{
 		Claw = GameObject.Find("Claw_Model");
@@ -42,6 +41,8 @@ public class ClawClick : MonoBehaviour {
 		//if (threshold > 60 && threshold < 80)
 		//	msManager.TriggerEvent ("Impulse");
 	}
+
+
 
 	public void SpawnBox() 
 	{ 
