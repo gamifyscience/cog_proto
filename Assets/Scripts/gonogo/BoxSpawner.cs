@@ -15,20 +15,20 @@ public class BoxSpawner : MonoBehaviour {
 	public GameObject SurpriseBox;
 	public static GameObject spawned_box;
 
-
 	//Items
-	public GameObject[] bombs_and_veggies;	//list of items we can spawn
+	public GameObject[] active_inactive;	//list of items we can spawn
 	public Transform pickup_point;			//target spawnpoint for the item
 	public Transform pickup_position;		//where the box will open and show the item
 	public float probability = 0.3f; 		//chance of getting an unwanted item
 	private PickupItem m_spawnItem;			//object script of the current item
-	//public GameObject spawned_item;
+
 
 	void OnEnable ()
 	{
 		msManager.StartListening ("SpawnBox", SpawnBox);
 		msManager.StartListening ("Grab", Grab);
 		msManager.StartListening ("ItemSpawned", ItemSpawned);
+		msManager.StartListening("DestroyBox", DestroyBox);
 	}
 
 
@@ -37,6 +37,7 @@ public class BoxSpawner : MonoBehaviour {
 		msManager.StopListening ("SpawnBox", SpawnBox);
 		msManager.StopListening ("Grab", Grab);
 		msManager.StopListening ("ItemSpawned", ItemSpawned);
+		msManager.StopListening ("DestroyBox", DestroyBox);
 	}
 
 	public void SpawnBox()
@@ -56,13 +57,14 @@ public class BoxSpawner : MonoBehaviour {
 		
 		spawn_point = GameObject.Find("SpawnPoint").transform;
 
-		GameObject spawned_box = Instantiate 
+		spawned_box = Instantiate 
 		(
 			SurpriseBox, 
 			spawn_point.position,
 			Quaternion.identity
 		) as GameObject;
 		spawned_box.transform.eulerAngles = new Vector3 (0,0,0);
+		//Debug.LogError ("Created " +spawned_box.ToString ());
 	}
 
 
@@ -87,15 +89,12 @@ public class BoxSpawner : MonoBehaviour {
 
 		GameObject spawned_item = Instantiate 
 			(
-				bombs_and_veggies[n],
-				pickup_point.position,
-				Quaternion.identity
+				active_inactive[n],
+				pickup_position.transform
 			) as GameObject;
 		
-		spawned_item.transform.eulerAngles = new Vector3 (0,0,0);
-		//spawned_box is the parent GObj for the spawned item after we intst on the pickup point.
-		//spawned_item.transform.parent = spawned_box.transform; //boxTransform);
-		//spawned_item.transform.SetParent(spawned_box.transform); //boxTransform);
+		spawned_item.transform.position = new Vector3 (0,0,0);
+	
 
 		msManager.TriggerEvent("ItemSpawned");
 	}
@@ -113,10 +112,22 @@ public class BoxSpawner : MonoBehaviour {
 //		Destroy(item, 0.2f);
 	}
 
+	void DestroyBox()
+	{
+		//TDB this would be better if we can check for the previous box before we start a new one 
+		/// I wasnt sure how to check for the clone prefab that is instantiated because the static object was not present?!
+		/// 
+		//on update lets see if the box is here and create a new one if it's not.
+		//startanother - the previous should be destroyed by now
+		msManager.TriggerEvent ("SpawnBox");
+	}
     void Update () 
 	{
 		//if (spawned_item != null)
 		//spawned_item.transform.parent = SurpriseBox.transform; //boxTransform);
+		//Debug.LogError (spawned_box.ToString ());
+			//	
 	}
+
 
 }

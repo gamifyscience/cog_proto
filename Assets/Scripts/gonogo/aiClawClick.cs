@@ -25,9 +25,4 @@ public class aiClawClick : MonoBehaviour {
 		aiClaw_a.SetTrigger("Grab");
 
 	}
-		
-	// Update is called once per frame
-	void Update () {
-
-	}
 }

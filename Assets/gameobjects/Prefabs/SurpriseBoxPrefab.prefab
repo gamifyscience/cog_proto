@@ -497,13 +497,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49231762288874fdba750c7f7d044bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnBox_anim: {fileID: 0}
+  SpawnedBox_a: {fileID: 9525414}
+  Conveyor: {fileID: 139368, guid: 6dcf276a5c2d64635a5445b8fa5217b5, type: 2}
+  Conveyor_a: {fileID: 9513120, guid: 6dcf276a5c2d64635a5445b8fa5217b5, type: 2}
+  active_inactive:
+  - {fileID: 1522532046576098, guid: c2f7cc1bfeaf14c8aab12fd36077856b, type: 2}
+  - {fileID: 1688172812352676, guid: 762940e073c094575b7679d96faaa520, type: 2}
   pickup_position: {fileID: 406070}
   middle_position: {fileID: 0}
   end_position: {fileID: 0}
   m_spawner: {fileID: 0}
+  spawned_item: {fileID: 0}
   move_time: 0.4
-  wait_time: 0.8
+  wait_time: 1
+  speed: 0.5
 --- !u!137 &13787768
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -534,6 +541,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
