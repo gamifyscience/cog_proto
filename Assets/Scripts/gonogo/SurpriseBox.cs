@@ -7,9 +7,10 @@ public class SurpriseBox : MonoBehaviour {
 //	public static SurpriseBox Instance { get; private set; }
 	//public Animator SpawnedBox_a;
 	public Animator SpawnedBox_a;
+
 	//animate the platform that moves the box on and off screen.
-	public GameObject Conveyor;
-	public Animator Conveyor_a; //this is a animation trigger-object controller
+	//public GameObject Conveyor;
+	//public Animator Conveyor_a; //this is a animation trigger-object controller
 
 	public GameObject[] active_inactive;
 	public Transform pickup_position;
@@ -45,11 +46,6 @@ public class SurpriseBox : MonoBehaviour {
 		Animator SpawnedBox_a = Animator.FindObjectOfType<Animator>();
 		BoxSpawner m_spawner = BoxSpawner.FindObjectOfType<BoxSpawner>();
 
-		//setup the conveyorbelt to move when the box spawns
-		GameObject Conveyor = GameObject.FindGameObjectWithTag ("Belt");
-		Conveyor_a = Conveyor.GetComponent<Animator> ();
-		Conveyor_a.SetBool("moving", true);
-
  		middle_position = GameObject.Find("ActionPoint").transform;
  		end_position = GameObject.Find("EndPoint").transform;
 		pickup_position = GameObject.Find("pickup_position").transform;
@@ -60,11 +56,11 @@ public class SurpriseBox : MonoBehaviour {
 
 		// wait until the box reaches the center of the screen
 		yield return new WaitForSeconds(move_time);
-		Conveyor_a.SetBool("moving", false);
+
         // dalay a random amount of time before opening the box
         float delay_time = Random.Range(kMinPauseBeforeOpen, kMaxPauseBeforeOpen);
 		yield return new WaitForSeconds(delay_time);
-        
+
         // open the box and spawn an item from the array
 		m_spawner.SpawnItem();
         SpawnedBox_a.SetTrigger("openbox");
@@ -72,13 +68,12 @@ public class SurpriseBox : MonoBehaviour {
 		// pause to let you grab the item
 		yield return new WaitForSeconds(wait_time);
 
-
 		//Tell the scene you ran out of time
 		//Close the Box
 		msManager.TriggerEvent ("NoInteraction");
 		SpawnedBox_a.SetTrigger("closebox");
-		Conveyor_a.SetBool("moving", true);
-
+		msManager.TriggerEvent( "StartMoving" );
+		yield return new WaitForEndOfFrame ();
 		//move towards end point and remove box
 		movetoExit();
 		yield return new WaitForEndOfFrame ();
@@ -97,7 +92,7 @@ public class SurpriseBox : MonoBehaviour {
 		//calculate time to wait for box to arrive at action point
 		float timetotarget = Vector3.Distance(transform.position, middle_position.position);
 		float timetowait = timetotarget / (10*speed) ;
-		Debug.LogError (timetowait + "/ distance "+ timetotarget);
+		//Debug.LogError (timetowait + "/ distance "+ timetotarget);
 		move_time = timetowait;
 		readynow = true; //update will move the box to the action point
 
@@ -136,7 +131,7 @@ public class SurpriseBox : MonoBehaviour {
 		} else if (readynow == true) {
 			transform.position = Vector3.MoveTowards (transform.position, middle_position.position, speed);
 			if (transform.position == middle_position.position) {
-				//m_spawner.SpawnItem ();
+				msManager.TriggerEvent( "StopMoving" );
 				readynow = false;
 			}
 		}
@@ -145,7 +140,8 @@ public class SurpriseBox : MonoBehaviour {
 
 	void CleanUp ()
 	{
-		Conveyor_a.SetBool("moving", false);
+		//Conveyor_a.SetBool("moving", false);
+		//msManager.TriggerEvent( "StopMoving" );
 		msManager.TriggerEvent( "DestroyBox" );
 		Destroy(this.gameObject, move_time);
 

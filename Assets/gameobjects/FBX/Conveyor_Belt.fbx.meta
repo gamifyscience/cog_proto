@@ -35,8 +35,9 @@ ModelImporter:
     400026: Root Bone_end
     4300000: Conveyor Belt Base Band
     4300002: Conveyor Belt Base
-    7400000: Conveyor Belt Skeleton|Conveyor Belt Moving
-    7400002: Conveyor Belt Skeleton|Conveyor Belt Stop
+    7400000: Belt Moving
+    7400002: Belt Stop
+    7400004: Belt Stop
     9500000: //RootNode
     13700000: Conveyor Belt Base
     13700002: Conveyor Belt Base Band
@@ -47,9 +48,11 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -60,7 +63,119 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Belt Moving
+      takeName: Conveyor Belt Skeleton|Conveyor Belt Moving
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Conveyor Belt Base
+        weight: 1
+      - path: Conveyor Belt Base Band
+        weight: 1
+      - path: Conveyor Belt Skeleton
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.001
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.001/Bone.001_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.002
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.002/Bone.002_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.003
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.003/Bone.003_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.004
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.004/Bone.004_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Root Bone
+        weight: 1
+      - path: Conveyor Belt Skeleton/Root Bone/Root Bone_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Belt Stop
+      takeName: Conveyor Belt Skeleton|Conveyor Belt Stop
+      firstFrame: 0
+      lastFrame: 1.1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Conveyor Belt Base
+        weight: 1
+      - path: Conveyor Belt Base Band
+        weight: 1
+      - path: Conveyor Belt Skeleton
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.001
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.001/Bone.001_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.002
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.002/Bone.002_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.003
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.003/Bone.003_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.004
+        weight: 1
+      - path: Conveyor Belt Skeleton/Bone.004/Bone.004_end
+        weight: 1
+      - path: Conveyor Belt Skeleton/Root Bone
+        weight: 1
+      - path: Conveyor Belt Skeleton/Root Bone/Root Bone_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -86,6 +201,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -96,7 +212,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

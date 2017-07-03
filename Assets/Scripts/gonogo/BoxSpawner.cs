@@ -54,7 +54,7 @@ public class BoxSpawner : MonoBehaviour {
     // Clone a new surprise box
     public void SpawnBoxRoutine () 
 	{
-		
+
 		spawn_point = GameObject.Find("SpawnPoint").transform;
 
 		spawned_box = Instantiate 

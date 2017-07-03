@@ -84,6 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 483906}
   - component: {fileID: 9513120}
+  - component: {fileID: 114951663495810956}
   m_Layer: 0
   m_Name: Conveyor_Belt
   m_TagString: Belt
@@ -130,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429632}
   - component: {fileID: 13700330}
+  - component: {fileID: 114213673953191498}
   m_Layer: 0
   m_Name: Conveyor Belt Base Band
   m_TagString: Untagged
@@ -357,8 +359,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139368}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1, y: -0.6700001, z: -0.26999998}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.049999952, y: -0.6700001, z: -0.26999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430196}
@@ -366,7 +368,7 @@ Transform:
   - {fileID: 403196}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &485308
 Transform:
   m_ObjectHideFlags: 1
@@ -534,3 +536,28 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139368}
   m_IsPrefabParent: 1
+--- !u!114 &114213673953191498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7e1edecfddf4855907e73176a9373e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 0.06
+  rend: {fileID: 13700330}
+--- !u!114 &114951663495810956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47b7547b1bd6491f8423b34cc18fe34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Conveyor_a: {fileID: 9513120}

@@ -50,13 +50,15 @@ public class msManager : MonoBehaviour
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
             thisEvent.AddListener(listener);
-            //Debug.LogError  ("Log a second event called: " + listener.Method);
+
         }
         else
         {
             thisEvent = new UnityEvent();
             thisEvent.AddListener(listener);
             instance.eventDictionary.Add(eventName, thisEvent);
+			//if (Application.isEditor)
+				//Debug.LogError  ("[msManager] An event was created: " + listener.Method);
         }
 
     }
