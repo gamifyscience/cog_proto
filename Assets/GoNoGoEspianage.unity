@@ -305,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194595514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 449648609}
@@ -937,7 +937,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22471328, guid: 4230502e1973f4c9e9ef6767dcc8c602, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22471328, guid: 4230502e1973f4c9e9ef6767dcc8c602, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2634,7 +2634,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476356, guid: b036a287daa874d738282d9bdc200fbf, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 469476, guid: b036a287daa874d738282d9bdc200fbf, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2937,6 +2937,7 @@ GameObject:
   - component: {fileID: 1801984127}
   - component: {fileID: 1801984128}
   - component: {fileID: 1801984129}
+  - component: {fileID: 1801984130}
   m_Layer: 0
   m_Name: uiManager
   m_TagString: Untagged
@@ -2974,7 +2975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1801984125
 MonoBehaviour:
@@ -3057,6 +3058,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1e99babb1a34d67976e4cc904667a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1801984130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1801984122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f84841482a7a4e92b9671858aeb4a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explode_fx:
+  - {fileID: 144344, guid: d157fcfc73457ea44b9a125e5be375ca, type: 2}
+  ActionSpawnPoint: {fileID: 194595515}
 --- !u!4 &1858920072
 Transform:
   m_ObjectHideFlags: 0
@@ -3739,7 +3754,7 @@ Transform:
   m_Children:
   - {fileID: 1758598294}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2133207448
 MeshRenderer:

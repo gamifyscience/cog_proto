@@ -40,6 +40,9 @@ public class PickupItem : MonoBehaviour
             Inattention();
             print("your claw hit the box");
         }
+		print("your claw hit the "+ target.ToString());
+		GameObject PlayerObject = target.GetComponent<GameObject> ();
+		PlayerObject.transform.parent = this.gameObject.transform;
     }
 
     public void MoveItem()
@@ -55,18 +58,9 @@ public class PickupItem : MonoBehaviour
            // end_position = GameObject.Find("EndPoint").transform;
             msManager.TriggerEvent("aiGrab");
             msManager.TriggerEvent("UpdateScore");
-            //			iTween.MoveTo
-            //			(
-            //				gameObject, 
-            //				iTween.Hash ("position", end_position, 
-            //					"time", 1.4f, 
-            //					"easetype", iTween.EaseType.linear, 
-            //					"onComplete", "Inattention")
-            //			);
-			// msManager.TriggerEvent("Inattention");
+
         }
     }
-
 
     void Inattention()
     {
@@ -83,8 +77,7 @@ public class PickupItem : MonoBehaviour
     void Explode()
     {
         msManager.TriggerEvent("ResetScore");
-        splat.Play();
-        Destroy(gameObject, splat.main.duration);
+		Destroy(gameObject, 0.1f);
     }
 
     public void Grab()
@@ -102,11 +95,6 @@ public class PickupItem : MonoBehaviour
         {
             Explode();
         }
-        else
-        {
-            Pass(); //MoveItem();
-        }
-			
     }
 
 

@@ -13,7 +13,7 @@ public class BoxSpawner : MonoBehaviour {
 	//Box
 	public Transform spawn_point;
 	public GameObject SurpriseBox;
-	public static GameObject spawned_box;
+	public static GameObject spawned_box; //why is this static again?
 
 	//Items
 	public GameObject[] active_inactive;	//list of items we can spawn
@@ -21,7 +21,7 @@ public class BoxSpawner : MonoBehaviour {
 	public Transform pickup_position;		//where the box will open and show the item
 	public float probability = 0.3f; 		//chance of getting an unwanted item
 	private PickupItem m_spawnItem;			//object script of the current item
-
+	private GameObject spawned_item;
 
 	void OnEnable ()
 	{
@@ -29,6 +29,7 @@ public class BoxSpawner : MonoBehaviour {
 		msManager.StartListening ("Grab", Grab);
 		msManager.StartListening ("ItemSpawned", ItemSpawned);
 		msManager.StartListening("DestroyBox", DestroyBox);
+		msManager.StartListening("DestroyItem", DestroyItem);
 	}
 
 
@@ -38,6 +39,7 @@ public class BoxSpawner : MonoBehaviour {
 		msManager.StopListening ("Grab", Grab);
 		msManager.StopListening ("ItemSpawned", ItemSpawned);
 		msManager.StopListening ("DestroyBox", DestroyBox);
+		msManager.StopListening ("DestroyItem", DestroyItem);
 	}
 
 	public void SpawnBox()
@@ -110,6 +112,12 @@ public class BoxSpawner : MonoBehaviour {
 	{
 //		Debug.Log("itemclean");
 //		Destroy(item, 0.2f);
+	}
+
+
+	void DestroyItem(){
+		print("tried Touch Destroy Item Spawned");
+		DestroyObject (spawned_item);
 	}
 
 	void DestroyBox()

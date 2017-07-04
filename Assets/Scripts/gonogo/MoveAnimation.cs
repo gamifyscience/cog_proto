@@ -27,12 +27,10 @@ public class MoveAnimation : MonoBehaviour {
 	}
 
 	void StartMoving(){
-		print ("conveyor start");
 		Conveyor_a.SetBool("moving", true);
 	}
 
 	void StopMoving(){
-		print ("conveyor stop");
 		Conveyor_a.SetBool("moving", false);
 	}
 }

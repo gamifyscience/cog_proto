@@ -181,6 +181,7 @@
      <Compile Include="Assets\Scripts\gonogo\Avatar.cs" />
      <Compile Include="Assets\Scripts\gonogo\BoxSpawner.cs" />
      <Compile Include="Assets\Scripts\gonogo\ClawClick.cs" />
+     <Compile Include="Assets\Scripts\gonogo\ErrorFeedback.cs" />
      <Compile Include="Assets\Scripts\gonogo\MoveAnimation.cs" />
      <Compile Include="Assets\Scripts\gonogo\MoveBelt.cs" />
      <Compile Include="Assets\Scripts\gonogo\PickupItem.cs" />
