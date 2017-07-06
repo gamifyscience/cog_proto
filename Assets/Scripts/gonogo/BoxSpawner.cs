@@ -7,9 +7,6 @@ public class BoxSpawner : MonoBehaviour {
 
 	public static BoxSpawner Instance { get; private set; }
 
-	//value from slider for spawnertrigger
-	public float threshhold;
-
 	//Box
 	public Transform spawn_point;
 	public GameObject SurpriseBox;
@@ -89,7 +86,7 @@ public class BoxSpawner : MonoBehaviour {
 			n = 1;
 		} 
 
-		GameObject spawned_item = Instantiate 
+		spawned_item = Instantiate 
 			(
 				active_inactive[n],
 				pickup_position.transform
@@ -116,7 +113,6 @@ public class BoxSpawner : MonoBehaviour {
 
 
 	void DestroyItem(){
-		print("tried Touch Destroy Item Spawned");
 		DestroyObject (spawned_item);
 	}
 
@@ -129,13 +125,5 @@ public class BoxSpawner : MonoBehaviour {
 		//startanother - the previous should be destroyed by now
 		msManager.TriggerEvent ("SpawnBox");
 	}
-    void Update () 
-	{
-		//if (spawned_item != null)
-		//spawned_item.transform.parent = SurpriseBox.transform; //boxTransform);
-		//Debug.LogError (spawned_box.ToString ());
-			//	
-	}
-
 
 }

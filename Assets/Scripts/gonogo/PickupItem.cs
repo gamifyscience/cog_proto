@@ -7,71 +7,57 @@ public class PickupItem : MonoBehaviour
 {
 	//public static PickupItem Instance { get; private set; }
     public bool is_bomb;
-    public bool itemGrabbed;
-    public string Name;
-    public int value;
-    public int speed = 2;
+    public string ItemName;
 
-    public float startTime;
-    public ParticleSystem splat;
-    public Transform end_position;
-    public Rigidbody rbody;
+	private bool itemGrabbed;
+   // public Rigidbody rbody;
 
     // Use this for initialization
     void Start()
     {
-        rbody = GetComponent<Rigidbody>();
+       // rbody = GetComponent<Rigidbody>();
         itemGrabbed = false;
         //Listen for the event that we are moving and you missed the ball.
-        msManager.StartListening("NoInteraction", NoInteraction);
-        msManager.StartListening("Grab", Grab);
+		msManager.StartListening("aiGrab", aiGrab);
+		msManager.StartListening("aiPass", aiPass);
+		msManager.StartListening("NoInteraction", NoInteraction);
+		msManager.StartListening("Grab", Grab);
     }
 
     void onDisable()
     {
-        msManager.StopListening("NoInteraction", NoInteraction);
-        msManager.StopListening("Grab", Grab);
+		msManager.StopListening("aiGrab", aiGrab);
+		msManager.StopListening("aiPass", aiPass);
+		msManager.StopListening("NoInteraction", NoInteraction);
+		msManager.StopListening("Grab", Grab);
     }
 
     void OnTriggerEnter(Collider target)
     {
 		if (target.GetComponent<Collider>().name == "SurpriseBoxPrefab")
         {
-            Inattention();
+			NoInteraction();
             print("your claw hit the box");
         }
-		print("your claw hit the "+ target.ToString());
-		GameObject PlayerObject = target.GetComponent<GameObject> ();
-		PlayerObject.transform.parent = this.gameObject.transform;
-    }
-
-    public void MoveItem()
-    {
-        Pass();
+		//put the item on the claw that grabs it first
+		this.gameObject.transform.parent = target.transform;
     }
 
     //if the item is not grabbed, it moves off screen or gets destroyed
     void NoInteraction()
     {
-        if (itemGrabbed == false)
-        {
-           // end_position = GameObject.Find("EndPoint").transform;
-            msManager.TriggerEvent("aiGrab");
-            msManager.TriggerEvent("UpdateScore");
+		if (itemGrabbed == false) 
+		{
+			if (this.is_bomb != true){
+				msManager.TriggerEvent ("aiGrab"); //let the ai collect and score/error
+			} else {
+				msManager.TriggerEvent ("aiPass"); //let the ai collect and not alter score
+			}
+		}
 
-        }
-    }
+		msManager.TriggerEvent("UpdateScore");
 
-    void Inattention()
-    {
-        //We forgot to get this one, destroy it!
-		Destroy(gameObject, 0.1f);
-    }
-
-    void Pass()
-    {
-        msManager.TriggerEvent("UpdateScore");
-        Destroy(gameObject, 0.3f);
+		Destroy(gameObject, 0.4f);
     }
 
     void Explode()
@@ -97,6 +83,16 @@ public class PickupItem : MonoBehaviour
         }
     }
 
+	public void aiGrab()
+	{
+		//We forgot to get this one, destroy it!
+		//print("too slow"); //add the time penalty
+			msManager.TriggerEvent("GrabTime");
+	}
 
+	public void aiPass()
+	{
+		//do nothing
+	}
 
 }

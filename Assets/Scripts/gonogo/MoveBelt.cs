@@ -26,7 +26,6 @@ public class MoveBelt : MonoBehaviour {
 	}
 
 	void StartMoving(){
-		print ("belt moving");
 		moving = true;
 	}
 
@@ -37,6 +36,7 @@ public class MoveBelt : MonoBehaviour {
 	void Update() {
 		if (moving) {
 			var scrollPos = rend.material.GetTextureOffset ("_MainTex").y;
+			//animate the belt texture for the illusion of moving.
 			if (scrollPos < 1f) {
 				float offset = scrollPos + scrollSpeed;
 				rend.material.SetTextureOffset ("_MainTex", new Vector2 (0, offset));

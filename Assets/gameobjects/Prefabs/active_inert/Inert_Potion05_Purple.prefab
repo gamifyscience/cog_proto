@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33229485481039968}
   - component: {fileID: 23047432113163526}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube_i
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,6 +166,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23544656625755326
 MeshRenderer:
@@ -197,6 +198,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23941133991920048
 MeshRenderer:
@@ -228,6 +230,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33229485481039968
 MeshFilter:
@@ -284,21 +287,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_bomb: 1
-  itemGrabbed: 0
-  Name: Inert
-  value: 0
-  speed: 2
-  startTime: 0
-  splat: {fileID: 19891332, guid: 2bdc186a2c521f1488fe14cb4a745323, type: 2}
-  end_position: {fileID: 0}
-  rbody: {fileID: 0}
+  ItemName: Inert
 --- !u!136 &136435134153164300
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688172812352676}
-  m_Material: {fileID: 13400000, guid: 9c7d6cc214d214cf9982ff201a4036a2, type: 2}
+  m_Material: {fileID: 13400000, guid: 44ec38f1310b54961b9bc3bf123ccb20, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.77

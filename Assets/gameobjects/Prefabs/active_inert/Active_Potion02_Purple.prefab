@@ -166,6 +166,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23798614511485394
 MeshRenderer:
@@ -197,6 +198,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23941005047596670
 MeshRenderer:
@@ -228,6 +230,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33095726817323872
 MeshFilter:
@@ -284,21 +287,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_bomb: 0
-  itemGrabbed: 0
-  Name: Active
-  value: 5
-  speed: 2
-  startTime: 0
-  splat: {fileID: 0}
-  end_position: {fileID: 0}
-  rbody: {fileID: 0}
+  ItemName: Active
 --- !u!136 &136775058656432402
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1522532046576098}
-  m_Material: {fileID: 13400000, guid: 9c7d6cc214d214cf9982ff201a4036a2, type: 2}
+  m_Material: {fileID: 13400000, guid: 44ec38f1310b54961b9bc3bf123ccb20, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.7401445

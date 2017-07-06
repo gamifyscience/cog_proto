@@ -177,7 +177,6 @@
      <Compile Include="Assets\Scripts\drone\RealCameraSwitch.cs" />
      <Compile Include="Assets\Scripts\drone\WebCamPhone.cs" />
      <Compile Include="Assets\Scripts\drone\hidePanel.cs" />
-     <Compile Include="Assets\Scripts\drone\hitthis.cs" />
      <Compile Include="Assets\Scripts\gonogo\Avatar.cs" />
      <Compile Include="Assets\Scripts\gonogo\BoxSpawner.cs" />
      <Compile Include="Assets\Scripts\gonogo\ClawClick.cs" />
@@ -187,6 +186,7 @@
      <Compile Include="Assets\Scripts\gonogo\PickupItem.cs" />
      <Compile Include="Assets\Scripts\gonogo\SurpriseBox.cs" />
      <Compile Include="Assets\Scripts\gonogo\aiClawClick.cs" />
+     <Compile Include="Assets\Scripts\gonogo\hitthis.cs" />
      <Compile Include="Assets\Scripts\maze\CollisionDetector.cs" />
      <Compile Include="Assets\Scripts\maze\ControllPerson.cs" />
      <Compile Include="Assets\Scripts\maze\DetectLift.cs" />

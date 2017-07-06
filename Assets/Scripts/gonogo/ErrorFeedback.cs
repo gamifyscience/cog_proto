@@ -24,7 +24,13 @@ public class ErrorFeedback : MonoBehaviour {
 	}
 
 	void OnDisable() {
-		
+		msManager.StopListening("Impulse", Impulse);
+		msManager.StopListening("ResetScore", ResetScore);
+		msManager.StopListening("ItemSpawned", ItemSpawned);
+		msManager.StopListening("aiGrab", aiGrab);
+		msManager.StopListening("LevelComplete", LevelComplete);
+		msManager.StopListening("NoInteraction", NoInteraction);
+		msManager.StopListening ("SpawnBox", SpawnBox);
 	}
 
 	void ResetScore()
