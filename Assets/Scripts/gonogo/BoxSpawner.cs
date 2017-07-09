@@ -11,6 +11,7 @@ public class BoxSpawner : MonoBehaviour {
 	public Transform spawn_point;
 	public GameObject SurpriseBox;
 	public static GameObject spawned_box; //why is this static again?
+	private bool Gameover = false;
 
 	//Items
 	public GameObject[] active_inactive;	//list of items we can spawn
@@ -23,29 +24,33 @@ public class BoxSpawner : MonoBehaviour {
 	void OnEnable ()
 	{
 		msManager.StartListening ("SpawnBox", SpawnBox);
-		msManager.StartListening ("Grab", Grab);
+		//msManager.StartListening ("Grab", Grab);
 		msManager.StartListening ("ItemSpawned", ItemSpawned);
 		msManager.StartListening("DestroyBox", DestroyBox);
 		msManager.StartListening("DestroyItem", DestroyItem);
+		msManager.StartListening("LevelComplete", LevelComplete);
 	}
 
 
 	void onDisable ()
 	{
 		msManager.StopListening ("SpawnBox", SpawnBox);
-		msManager.StopListening ("Grab", Grab);
+		//msManager.StopListening ("Grab", Grab);
 		msManager.StopListening ("ItemSpawned", ItemSpawned);
 		msManager.StopListening ("DestroyBox", DestroyBox);
 		msManager.StopListening ("DestroyItem", DestroyItem);
+		msManager.StopListening("LevelComplete", LevelComplete);
 	}
 
 	public void SpawnBox()
 	{
-        SpawnBoxRoutine();
+		if (Gameover == false)
+        	SpawnBoxRoutine();
     }
 
-    public void Grab()
+	public void LevelComplete()
     {
+		Gameover = true;
     }
 
 

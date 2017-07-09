@@ -16,8 +16,9 @@ public class PauseOnClick : MonoBehaviour
             enabled = false;
             return;
         }
-
         button.onClick.AddListener(OnClick);
+		m_isPaused = false;
+		Time.timeScale = 1;
     }
 
     void OnDestroy()

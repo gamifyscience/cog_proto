@@ -8,17 +8,20 @@ using TouchScript.Gestures;
 public class buttonGo : MonoBehaviour {
 
 	public Button ButtonGo;
+	public GameObject Panel;
+	public GameObject ScorePanel;
 
     private void Start()
     {
-       // msManager.StartListening("DestroyBox", DestroyBox);
+       msManager.StartListening("DestroyBox", DestroyBox);
     }
 
 	private void OnEnable ()
 	{	
-	//if (FlickGesture.flickedinvoker != null) {
+		//if (FlickGesture.flickedinvoker != null) {
 		GetComponent<FlickGesture>().Flicked += OnFlick;
-	//	TouchManager.Instance.TouchesEnded += OnFlicked;	}
+
+		msManager.StartListening("LevelComplete", LevelComplete);
 
 	}
 
@@ -40,6 +43,7 @@ public class buttonGo : MonoBehaviour {
 		{
 			msManager.TriggerEvent( "SpawnBox" );
             ButtonGo.interactable = false;
+			Panel.SetActive(false);
 		}
 	}
 
@@ -47,4 +51,9 @@ public class buttonGo : MonoBehaviour {
     {
        // ButtonGo.interactable = true;
     }
+
+	void LevelComplete()
+	{
+		ScorePanel.SetActive(true);
+	}
 }
