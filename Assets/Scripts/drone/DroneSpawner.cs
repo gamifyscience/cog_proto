@@ -5,6 +5,7 @@ using UnityEngine;
 public class DroneSpawner : MonoBehaviour
 {
     public GameObject m_dronePrefab;
+	public Transform m_droneParent;
     public int kMinDroneCount = 4;
     public int kMaxDroneCount = 6;
 
@@ -13,6 +14,11 @@ public class DroneSpawner : MonoBehaviour
     public float kMaxDroneDistance = 60f;
 	public float kMinDroneHeight = -15f;
 	public float kMaxDroneHeight = 25f;
+
+	void onEnable()
+	{
+		//msManager.StartListening ("DroneDetected", DroneDetected);
+	}
 
     private void Awake()
     {
@@ -49,6 +55,10 @@ public class DroneSpawner : MonoBehaviour
     // Spawns a single drone.
     private void SpawnDrone(Vector3 position)
     {
-        Instantiate(m_dronePrefab, position, Quaternion.identity);
+		Instantiate(m_dronePrefab, position, Quaternion.identity, m_droneParent);
+		//m_dronePrefab.transform.SetParent (droneParent, false);
     }
+		
+
+		
 }

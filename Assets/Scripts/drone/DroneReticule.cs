@@ -9,6 +9,8 @@ public class DroneReticule : MonoBehaviour
 
 	public GameObject[] UIPanel;
 
+	protected GameObject m_closestDrone;
+
     void Start()
     {
         material = gameObject.GetComponent<Renderer>().material;
@@ -60,8 +62,33 @@ public class DroneReticule : MonoBehaviour
     void TargetAcquired()
     {
         material.color = Color.green;
+		m_closestDrone = FindNearestTarget ();
+		transform.position = m_closestDrone.transform.position;
+		print (m_closestDrone.transform.position.ToString ());
 		//spin.SetTrigger ("TargetOn");
     }
+
+	//find nearest drone:
+	GameObject FindNearestTarget()
+	{
+		GameObject[] gos;
+		gos = GameObject.FindGameObjectsWithTag("Drone");
+		GameObject targetGO = null;
+		float distance = Mathf.Infinity;
+		Vector3 position = transform.position;
+		foreach (GameObject go in gos)
+		{
+			Vector3 diff = go.transform.position - position;
+			float curDistance = diff.sqrMagnitude;
+			if (curDistance < distance)
+			{
+				targetGO = go;
+				distance = curDistance;
+			}
+		}
+		//Debug.LogError(targetGO.transform.position.ToString());
+		return targetGO;
+	}
 
     void TargetOff()
     {
