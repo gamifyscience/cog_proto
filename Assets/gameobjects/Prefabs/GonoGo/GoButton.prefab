@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonGo: {fileID: 0}
+  Panel: {fileID: 0}
+  ScorePanel: {fileID: 0}
 --- !u!222 &22234180
 CanvasRenderer:
   m_ObjectHideFlags: 1

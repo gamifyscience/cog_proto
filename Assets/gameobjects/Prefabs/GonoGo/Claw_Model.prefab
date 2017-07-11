@@ -453,8 +453,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Claw: {fileID: 169078}
   Claw_a: {fileID: 95000012354850022}
-  clawSlider: {fileID: 0}
-  threshhold: 0
 --- !u!137 &13736316
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -611,7 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d2b9eb37e0f4e0392d01cd2de58592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbody: {fileID: 54935878064232776}
 --- !u!135 &135362006512204554
 SphereCollider:
   m_ObjectHideFlags: 1

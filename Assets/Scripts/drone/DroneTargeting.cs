@@ -12,6 +12,8 @@ public class DroneTargeting : MonoBehaviour
     public TargetingChangedDelegate OnTargetingChanged;
 
     public static DroneTargeting Instance { get; private set; }
+	public Transform Direction_img;
+	protected GameObject m_closestDrone;
 
     private float kTargetedAngle = 5f;
     private float kBarelyTargetedAngle = 10f;
@@ -114,7 +116,41 @@ public class DroneTargeting : MonoBehaviour
 
         m_state = state;
         m_target = target;
+		//UpdateDirectionArrow ();
+
     }
+
+	void Update()
+	{	
+		m_closestDrone = FindNearestTarget ();
+		Vector3 dir = m_closestDrone.transform.InverseTransformPoint (Direction_img.position);
+		float a = Mathf.Atan2 (dir.x, dir.z) * Mathf.Rad2Deg;
+		a += 180;
+		Direction_img.transform.localEulerAngles = new Vector3 (0, 180, a);
+	}
+
+	//find nearest drone:
+	protected GameObject FindNearestTarget()
+	{
+		GameObject[] gos;
+		gos = GameObject.FindGameObjectsWithTag("Drone");
+		GameObject targetGO = null;
+		float distance = Mathf.Infinity;
+		Vector3 position = transform.position;
+		foreach (GameObject go in gos)
+		{
+			Vector3 diff = go.transform.position - position;
+			float curDistance = diff.sqrMagnitude;
+			if (curDistance < distance)
+			{
+				targetGO = go;
+				distance = curDistance;
+			}
+		}
+		//Debug.LogError(targetGO.transform.position.ToString());
+		return targetGO;
+	}
+
 
     // Takes an angle from camera center and tells us whether we're looking at the target
     // directly, indirectly, or not at all.
