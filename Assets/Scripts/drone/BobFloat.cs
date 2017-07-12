@@ -15,7 +15,7 @@ public class BobFloat : MonoBehaviour
     void Awake()
     {
         originalY = this.transform.position.y;
-        m_timeOffset = Random.Range(-2f, 2f);
+		m_timeOffset = Random.Range(-1.2f, 1.5f);
     }
 
     void Update()

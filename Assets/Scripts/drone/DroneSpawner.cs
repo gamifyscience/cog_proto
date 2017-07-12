@@ -32,9 +32,8 @@ public class DroneSpawner : MonoBehaviour
 			float thisy = Random.Range (kMinDroneHeight, kMaxDroneHeight);
 
             // TODO: ensure that drones can't spawn too close to one another.
-			Vector3 pos = GetRandomDronePosition(camPos, thisy, kMinDroneDistance, kMaxDroneDistance );
-
-            SpawnDrone(pos);
+			Vector3 pos = GetRandomDronePosition(camPos, thisy, kMinDroneDistance, kMaxDroneDistance);
+			SpawnDrone(pos, i);
         }
     }
 
@@ -43,6 +42,7 @@ public class DroneSpawner : MonoBehaviour
     {
         // Get a random direction vector
         Vector3 direction = RandomUtils.GetNormalizedVector();
+
         // Extend the vector out to a random distance
 
         direction *= Random.Range(minDistance, maxDistance);
@@ -53,12 +53,10 @@ public class DroneSpawner : MonoBehaviour
     }
 
     // Spawns a single drone.
-    private void SpawnDrone(Vector3 position)
+	private void SpawnDrone(Vector3 position, int count)
     {
 		Instantiate(m_dronePrefab, position, Quaternion.identity, m_droneParent);
-		//m_dronePrefab.transform.SetParent (droneParent, false);
-    }
-		
+		m_dronePrefab.name = m_dronePrefab.name + count.ToString();
 
-		
+    }
 }
