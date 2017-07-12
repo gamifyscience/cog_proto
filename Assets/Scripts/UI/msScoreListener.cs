@@ -1,27 +1,36 @@
 ﻿using UnityEngine;
-//using UnityEngine.Events;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
+
 public class msScoreListener : MonoBehaviour
 {
     // Timestamp when the most recent box was spawned.
-    public float spawnTime;	//time item available
+	public float spawnTime = 0.0f;	//time item available
     public float grabTime;	//time item pickedup
-    public float score;		//interval score
-    public float newScore; //cumalitive score/time
-
+	public float score = 0.0f;		//interval score
+    public float newScore = 0.0f; //cumalitive score/time
+	private bool isBoxOpen = false;
     public Text scoreText;
     public Text countText;
+	public Text errorText;
     public Text roundText;
     public int kBoxesPerRound = 6;
 	public static int round = 1;
     
-	private int boxCount = 0;
+	private int boxCount = 1;
     private int itemCount = 0;
-    private int errorA = 0;
+    private int errorA = 0; //max 4 errors
     private int errorB = 0;
+	public int kMaxErrors = 4;
+	private float BestScore = 3;
+
+	//plugin for UI
+	public EnergyBar CountBar;
+	public EnergyBar RoundBar;
+	public EnergyBar ScoreMeter;
 
     void Start()
     {
@@ -34,7 +43,6 @@ public class msScoreListener : MonoBehaviour
         msManager.StartListening("aiGrab", aiGrab);
 		msManager.StartListening("aiPass", aiPass);
         msManager.StartListening("LevelComplete", LevelComplete);
-
         DisplayScore();
     }
 
@@ -58,6 +66,7 @@ public class msScoreListener : MonoBehaviour
 
     void ItemSpawned()
     {
+		isBoxOpen = true;
         spawnTime = Time.time;
         itemCount = itemCount + 1;
     }
@@ -67,20 +76,36 @@ public class msScoreListener : MonoBehaviour
         grabTime = Time.time;
     }
 
+
+	void Update(){
+
+		var meterValue = Mathf.Clamp01 ((Time.time - spawnTime) / boxCount);
+		if (isBoxOpen)
+			ScoreMeter.ValueF = meterValue;
+	}
+
     void UpdateScore()
-    {
+	{
+		isBoxOpen = false;
+	
         if (boxCount < kBoxesPerRound)
         {
             score = grabTime > 0 ? grabTime - spawnTime : 0;
 			newScore = newScore + score;
 			AnswerCustom.LogDroneJamInterval ("EspiangeRound", "Interval_Score", score);
-            DisplayScore();
         }
         else
         {
-            msManager.TriggerEvent("LevelComplete");
             NewRound();
         }
+
+		var maxErrors = errorA + errorB;
+		if (maxErrors >= kMaxErrors)
+		{
+			msManager.TriggerEvent ("LevelComplete");
+			return;
+		}
+		DisplayScore();
     }
 
     void ResetScore()
@@ -89,32 +114,35 @@ public class msScoreListener : MonoBehaviour
 		grabTime = 0;
         boxCount = 0;
         errorA = errorA + 1;
-        DisplayScore();
     }
 
     void NewRound()
     {
-		//LogDroneJamError (string JamError, string Attribute1, object Detail1, string Attribute2, object Detail2)
 		AnswerCustom.LogDroneJamError ("EspiangeErrors", "Error_Miss", errorB, "Error_Wrong", errorA);
 		AnswerCustom.LogDroneJamInterval ("EspiangeRound_w" + kBoxesPerRound.ToString(), "Time", newScore);
+		if (newScore < BestScore)
+			BestScore = newScore;
+
         newScore = 0.0f;
         boxCount = 0;
         ++round;
-        DisplayScore();
         print("Round: " + round);
 
+
     }
 
-
-    void aiGrab()
+    void aiGrab() //player missed item - ai grabbed it
     {
         errorB = errorB + 1;
+		boxCount = boxCount - 1;
+		itemCount = itemCount -1;
     }
 
-	void aiPass ()
+	void aiPass () //plyer correctly let item pass
 	{
 		grabTime = 0;
 		//boxCount = boxCount - 1; //set this value if the narrative is to collect x per round
+		itemCount = itemCount -1;
 	}
 
     void Impulse()
@@ -124,15 +152,18 @@ public class msScoreListener : MonoBehaviour
     }
     void DisplayScore()
     {
-        scoreText.text = "SCORE: " + newScore.ToString("F2");
-        countText.text = boxCount.ToString();
-        roundText.text = "ROUND " + round;
+		CountBar.valueCurrent = boxCount;
+		RoundBar.valueCurrent = round;
+
+		roundText.text = "ROUNDS: " + round;
+		scoreText.text = "SCORE: " + (100*BestScore).ToString("F1");
+		errorText.text = "BROKEN: " + errorA.ToString(); //display impulse errors;
+		countText.text = "COLLECTED: " + itemCount;
     }
 
     void LevelComplete()
     {
-        //errorText.text = errorB.ToString() + ":" + errorA.ToString() + "/" + itemCount.ToString();
-
         DisplayScore();
     }
+
 }

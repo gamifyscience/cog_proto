@@ -22,7 +22,7 @@ public class SurpriseBox : MonoBehaviour {
 	public GameObject spawned_item;
 
 	public float move_time = 1.0f;
-	public float wait_time = 1.6f;
+	public float wait_time = 1.5f;
 	public float speed = 0.5f;
     // How long should the box wait in place before opening? (We'll choose a random
     // number between these two values.)
@@ -45,9 +45,9 @@ public class SurpriseBox : MonoBehaviour {
 	{
 		//speed multiplier
 		var currentround = msScoreListener.round;
-		var roundspeed = currentround / 11;
+		var roundspeed = currentround / 7;
 		var open_time = wait_time - roundspeed;
-
+		//print ("spawning box");
 
 		// find wait and end points
 		Animator SpawnedBox_a = Animator.FindObjectOfType<Animator>();
@@ -60,21 +60,22 @@ public class SurpriseBox : MonoBehaviour {
 		//move toward wait point
 		movetoAction( middle_position );
 		yield return new WaitForEndOfFrame ();
-
+		//print ("movingbox " +move_time);
 		// wait until the box reaches the center of the screen
 		yield return new WaitForSeconds(move_time);
-
+		//print ("her's the box!");
         // delay a random amount of time before opening the box
         float delay_time = Random.Range(kMinPauseBeforeOpen, kMaxPauseBeforeOpen);
 		yield return new WaitForSeconds(delay_time);
-
+		//print ("opening the box");
         // open the box and spawn an item from the array
 		m_spawner.SpawnItem();
+		//print ("filling the box");
 		//msManager.TriggerEvent( "ItemSpawned" );
 
 		// pause to let you grab the item
 		yield return new WaitForSeconds(open_time);
-
+		//print ("get the stuff in the box");
 		//Tell the scene you ran out of time
 		//Close the Box
 		msManager.TriggerEvent ("NoInteraction");
@@ -153,8 +154,6 @@ public class SurpriseBox : MonoBehaviour {
 
 	void CleanUp ()
 	{
-		//Conveyor_a.SetBool("moving", false);
-		//msManager.TriggerEvent( "StopMoving" );
 		msManager.TriggerEvent( "DestroyBox" );
 		Destroy(this.gameObject, move_time);
 

@@ -507,7 +507,7 @@ MonoBehaviour:
   m_spawner: {fileID: 0}
   spawned_item: {fileID: 0}
   move_time: 0.4
-  wait_time: 1.6
+  wait_time: 1.5
   speed: 0.5
 --- !u!137 &13787768
 SkinnedMeshRenderer:

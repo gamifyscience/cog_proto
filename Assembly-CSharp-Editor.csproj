@@ -147,20 +147,40 @@
      <Compile Include="Assets\Scripts\UI\TouchScript\Editor\Utils\PropertyDrawers\ToggleLeftDrawer.cs" />
      <Compile Include="Assets\Scripts\UI\TouchScript\Modules\TUIO\Editor\InputSources\TuioInputEditor.cs" />
      <None Include="Assets\Images\NewImageEffectShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font White DB.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font DB.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font.shader" />
      <None Include="Assets\Materials\Shaders\SciFiHologramShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTint.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTintPre.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\ExpandFillShaderPre.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font White.shader" />
      <None Include="Assets\Plugins\Android\crashlytics-wrapper\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitShaderPre.shader" />
      <None Include="Assets\Plugins\Android\fabric-init\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\RadialFillShaderPre.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\VerticalFillShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\HorizontalFillShaderPre.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\EBTCanvasClearMask.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\THIRDPARTYLICENSE.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\RadialFillShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitShader.shader" />
      <None Include="Assets\Plugins\Android\answers\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\fabric\NOTICE.txt" />
+     <None Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\Sources\How To Build.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\ExpandFillShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\Template-AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\VerticalFillShaderPre.shader" />
      <None Include="Assets\gameobjects\Textures\Shaders\SciFiHologramShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\HorizontalFillShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTintPre DB.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTint DB.shader" />
      <None Include="Assets\Plugins\Android\fabric\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\beta\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\crashlytics\AndroidManifest.xml" />
@@ -237,6 +257,18 @@
  <Reference Include="TUIOsharp">
  <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Scripts/UI/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
  </Reference>
+ <Reference Include="Mad2D_Editor">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Editor/Mad2D_Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="MadCommons_Editor">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Editor/MadCommons_Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Mad2D">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Energy Bar Tookit/Scripts/Mad2D.dll</HintPath>
+ </Reference>
+ <Reference Include="MadCommons">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Energy Bar Tookit/Scripts/MadCommons.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
@@ -251,6 +283,8 @@
       <Project>{8AA0EC57-F4F7-82AE-09CA-5053F5502791}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.unityproj">
       <Project>{A09E76F6-F833-DBAE-5A80-7BDF7773308D}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{B80E331B-A13D-51D2-6D0A-2AFD7FD79B22}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -46,25 +46,93 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\7SegScoreboard\Clock4Digits.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\Clock6Digits.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\ContainerDisplay7Seg.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\Display2Point.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\Display7Seg.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\SetCurrentTime4Digits.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\SetCurrentTime6Digits.cs" />
+     <Compile Include="Assets\Plugins\7SegScoreboard\SetTimerCountUp.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\AnimationPlayer.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\BarOptionsGUI.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\BarOptionsGUIMulti.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\BarPresentation.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\EnergyBarPresentationColorize.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\EnergyBarUGUISlider.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\GoCircles.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\InstantiateRandom.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\LoadingScript.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\MultiBarSliders.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\RandomInstantiatedValueChanger.cs" />
+     <Compile Include="Assets\Plugins\Energy Bar Toolkit\Examples\Scripts\RepeatedUGUILastIconAnimator.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\3DRenderers\EnergyBar3DBase.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\3DRenderers\FilledRenderer3D.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\3DRenderers\RepeatedRenderer3D.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\3DRenderers\SequenceRenderer3D.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\3DRenderers\TransformRenderer3D.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\ColorBind.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\EnergyBar.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\EnergyBarBase.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\EnergyBarCommons.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\EnergyBarFollowObject.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\OnGUI\EnergyBarOnGUIBase.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\OnGUI\EnergyBarRenderer.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\OnGUI\EnergyBarRepeatRenderer.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\OnGUI\EnergyBarSequenceRenderer.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\OnGUI\EnergyBarTransformRenderer.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\Other\ObjectFinder.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\Screen2.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\SimpleEvent.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\Utils.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\EnergyBarSpawnerUGUI.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\EnergyBarUGUIBase.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\FadeUGUI.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\FilledRendererUGUI.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\Image2.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\RepeatedRendererUGUI.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\SequenceRendererUGUI.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\SlicedRendererUGUI.cs" />
+     <Compile Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\uGUI\TransformRendererUGUI.cs" />
      <None Include="Assets\Images\NewImageEffectShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font White DB.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font DB.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font.shader" />
      <None Include="Assets\Materials\Shaders\SciFiHologramShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTint.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTintPre.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\ExpandFillShaderPre.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font White.shader" />
      <None Include="Assets\Plugins\Android\crashlytics-wrapper\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitShaderPre.shader" />
      <None Include="Assets\Plugins\Android\fabric-init\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\RadialFillShaderPre.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\VerticalFillShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\HorizontalFillShaderPre.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\EBTCanvasClearMask.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\THIRDPARTYLICENSE.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\RadialFillShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitShader.shader" />
      <None Include="Assets\Plugins\Android\answers\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\fabric\NOTICE.txt" />
+     <None Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\Sources\How To Build.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\ExpandFillShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\Template-AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\VerticalFillShaderPre.shader" />
      <None Include="Assets\gameobjects\Textures\Shaders\SciFiHologramShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\HorizontalFillShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTintPre DB.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTint DB.shader" />
      <None Include="Assets\Plugins\Android\fabric\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\beta\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\crashlytics\AndroidManifest.xml" />
@@ -101,6 +169,12 @@
  </Reference>
  <Reference Include="TUIOsharp">
  <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Scripts/UI/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
+ </Reference>
+ <Reference Include="Mad2D">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Energy Bar Tookit/Scripts/Mad2D.dll</HintPath>
+ </Reference>
+ <Reference Include="MadCommons">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Energy Bar Tookit/Scripts/MadCommons.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
