@@ -12,14 +12,23 @@ public class hidePanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-
 		msManager.StartListening ("Targeted", Targeted);
 		msManager.StartListening ("Untargeted", Untargeted);
-		//msManager.StartListening ("BarelyTargeted", BarelyTargeted);
-
-		//setup the number list so it isn't empty
+			//setup the number list so it isn't empty
 		Button thisBtn = btn.GetComponent<Button> ();
 		thisBtn.onClick.Invoke ();
+	}
+
+	void onEnable()
+	{
+		msManager.StartListening ("Targeted", Targeted);
+		msManager.StartListening ("Untargeted", Untargeted);
+	}
+
+	void onDisable()
+	{
+		msManager.StopListening ("Targeted", Targeted);
+		msManager.StopListening ("Untargeted", Untargeted);
 	}
 
 	void Start()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveBelt : MonoBehaviour {
-	public float scrollSpeed = 0.25F;
+	public float scrollSpeed = 0.55F;
 	public Renderer rend;
 	private bool moving;
 
@@ -37,12 +37,14 @@ public class MoveBelt : MonoBehaviour {
 		if (moving) {
 			var scrollPos = rend.material.GetTextureOffset ("_MainTex").y;
 			//animate the belt texture for the illusion of moving.
+			//move at a consistance rate, not frame based
+			float speed = scrollSpeed * Time.deltaTime;
 			if (scrollPos < 1f) {
-				float offset = scrollPos + scrollSpeed;
-				rend.material.SetTextureOffset ("_MainTex", new Vector2 (0, offset));
-			} else {
-				rend.material.SetTextureOffset ("_MainTex", new Vector2 (0, 0));
-			}
+				float offset = scrollPos + speed;
+					rend.material.SetTextureOffset ("_MainTex", new Vector2 (0, offset));
+				} else {
+					rend.material.SetTextureOffset ("_MainTex", new Vector2 (0, 0));
+				}
 		}
 	}
 }

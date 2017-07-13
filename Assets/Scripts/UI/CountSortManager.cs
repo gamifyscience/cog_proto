@@ -35,7 +35,7 @@ public class CountSortManager : MonoBehaviour {
 
 	public void setupDecoder (){
 
-		if (!DroneTargeting.Instance.HasTarget ())
+		if (!DroneTargeting.Instance.HasTarget ()) //TBD for further investigation, is this why the first drone sometimes doesn't have a jam sequence?
 			return;
 		HiLoManager.CountOrder = 1;
 		int listvalue = HiLoManager.OnSetValue(myid);
@@ -49,7 +49,6 @@ public class CountSortManager : MonoBehaviour {
 		
 		if (!DroneTargeting.Instance.HasTarget ())
 			return;
-
 
 		//repop value with next number if the order is correct
 		// TODO there is a hack here that set countvalue position +1 so it can be incremented

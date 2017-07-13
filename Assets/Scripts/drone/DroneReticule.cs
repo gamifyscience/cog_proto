@@ -24,9 +24,7 @@ public class DroneReticule : MonoBehaviour
 
 		UIPanel = GameObject.FindGameObjectsWithTag("Panel");
 
-		//UIPanel.SetValue (enabled, false);
-		//UIPanel.GetEnumerator()
-//		Debug.LogError (UIPanel);
+		//msManager.StartListening("Targeted", Targeted);
     }
 
     private void OnDestroy()
@@ -59,13 +57,10 @@ public class DroneReticule : MonoBehaviour
 
     }
 
-    void TargetAcquired()
+	/*
+	void Targeted()
     {
-        material.color = Color.green;
 		m_closestDrone = FindNearestTarget ();
-		transform.position = m_closestDrone.transform.position;
-		print (m_closestDrone.transform.position.ToString ());
-		//spin.SetTrigger ("TargetOn");
     }
 
 	//find nearest drone:
@@ -87,8 +82,9 @@ public class DroneReticule : MonoBehaviour
 			}
 		}
 		//Debug.LogError(targetGO.transform.position.ToString());
+
 		return targetGO;
-	}
+	} */
 
     void TargetOff()
     {

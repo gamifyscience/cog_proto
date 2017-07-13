@@ -11,6 +11,8 @@ public class DroneTargeting : MonoBehaviour
     public delegate void TargetingChangedDelegate(GameObject oldTarget, GameObject newTarget, eTargetingState oldState, eTargetingState newState);
     public TargetingChangedDelegate OnTargetingChanged;
 
+	public GameObject Cube;
+
     public static DroneTargeting Instance { get; private set; }
 	public GameObject Player; //used for finding angle direction to drone
 	public Transform Direction_img; //the direction arrow on reticule target
@@ -76,6 +78,9 @@ public class DroneTargeting : MonoBehaviour
             }
 
 			UpdateCurrentTarget(m_closestDrone, bestAngle);
+
+			//highlight the closest drone with a prebab animation
+			Cube.GetComponent<GoToDrone>().t_TargetDrone = m_closestDrone.transform;
 
 			//put a direction arrow toward closest drone
 			Vector3 dir = Player.transform.InverseTransformPoint(m_closestDrone.transform.position);

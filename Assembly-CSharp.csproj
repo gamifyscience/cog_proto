@@ -63,6 +63,7 @@
      <Compile Include="Assets\Fabric\Runtime\Internal\IOSImpl.cs" />
      <Compile Include="Assets\Fabric\Runtime\Internal\Impl.cs" />
      <Compile Include="Assets\Fabric\ThirdParty\MiniJSON.cs" />
+     <Compile Include="Assets\GoToDrone.cs" />
      <Compile Include="Assets\Scripts\AnswerCustom.cs" />
      <Compile Include="Assets\Scripts\MoveTo.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />

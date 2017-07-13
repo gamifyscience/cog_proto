@@ -6,12 +6,12 @@ public class DroneSpawner : MonoBehaviour
 {
     public GameObject m_dronePrefab;
 	public Transform m_droneParent;
-    public int kMinDroneCount = 4;
-    public int kMaxDroneCount = 6;
+    public int kMinDroneCount = 3;
+    public int kMaxDroneCount = 5;
 
     // These define how far away from the camera the drones can spawn.
-    public float kMinDroneDistance = 25f;
-    public float kMaxDroneDistance = 60f;
+    public float kMinDroneDistance = 35f;
+    public float kMaxDroneDistance = 80f;
 	public float kMinDroneHeight = -15f;
 	public float kMaxDroneHeight = 25f;
 
@@ -48,6 +48,11 @@ public class DroneSpawner : MonoBehaviour
         direction *= Random.Range(minDistance, maxDistance);
         // Start from the specified origin
 		direction[1] = yValue;
+
+		//dont let it be behind you - make Z possitive
+		if (direction [2] < 0)
+			direction [2] = direction [2] * -1;
+
 		//print (direction);
         return direction + origin;
     }
