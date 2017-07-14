@@ -11,7 +11,12 @@ public class DroneTargeting : MonoBehaviour
     public delegate void TargetingChangedDelegate(GameObject oldTarget, GameObject newTarget, eTargetingState oldState, eTargetingState newState);
     public TargetingChangedDelegate OnTargetingChanged;
 
+	public GameObject Cube;
+
     public static DroneTargeting Instance { get; private set; }
+	public GameObject Player; //used for finding angle direction to drone
+	public Transform Direction_img; //the direction arrow on reticule target
+	protected GameObject m_closestDrone;
 
     private float kTargetedAngle = 5f;
     private float kBarelyTargetedAngle = 10f;
@@ -19,7 +24,7 @@ public class DroneTargeting : MonoBehaviour
     private eTargetingState m_state = eTargetingState.Untargeted;
     private GameObject m_target = null;
     // How often should we recheck our targets?
-    private const float kUpdateInterval = 0.2f;
+    private const float kUpdateInterval = 0.3f;
 
     public enum eTargetingState
     {
@@ -53,26 +58,34 @@ public class DroneTargeting : MonoBehaviour
 
             Vector3 camForward = transform.forward;
             Vector3 camPos = transform.position;
-
             float bestAngle = float.MaxValue;
-            GameObject bestTarget = null;
+			if (m_closestDrone)
+				m_closestDrone = null;
 
             foreach (GameObject drone in drones)
             {
                 Vector3 dronePos = drone.transform.position;
-                Vector3 directionToDrone = (dronePos - camPos).normalized;
+				Vector3 directionToDrone = (dronePos - camPos).normalized;
 
                 // Angle (in degrees) between the camera's center and the vector to the drone
                 float angle = Vector3.Angle(camForward, directionToDrone);
 
                 if (angle < bestAngle)
                 {
+					m_closestDrone = drone; //best target and closest are the same clone btw
                     bestAngle = angle;
-                    bestTarget = drone;
                 }
             }
 
-            UpdateCurrentTarget(bestTarget, bestAngle);
+			UpdateCurrentTarget(m_closestDrone, bestAngle);
+
+			//highlight the closest drone with a prebab animation
+			Cube.GetComponent<GoToDrone>().t_TargetDrone = m_closestDrone.transform;
+
+			//put a direction arrow toward closest drone
+			Vector3 dir = Player.transform.InverseTransformPoint(m_closestDrone.transform.position);
+			float z = Mathf.Atan2 (dir.x, dir.z) * Mathf.Rad2Deg;
+			Direction_img.transform.localEulerAngles = new Vector3 (0, 0, z + 180);
 
             yield return new WaitForSeconds(kUpdateInterval);
         }
@@ -114,6 +127,8 @@ public class DroneTargeting : MonoBehaviour
 
         m_state = state;
         m_target = target;
+		//UpdateDirectionArrow ();
+
     }
 
     // Takes an angle from camera center and tells us whether we're looking at the target

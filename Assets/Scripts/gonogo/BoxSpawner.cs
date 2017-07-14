@@ -7,13 +7,11 @@ public class BoxSpawner : MonoBehaviour {
 
 	public static BoxSpawner Instance { get; private set; }
 
-	//value from slider for spawnertrigger
-	public float threshhold;
-
 	//Box
 	public Transform spawn_point;
 	public GameObject SurpriseBox;
-	public static GameObject spawned_box;
+	public static GameObject spawned_box; //why is this static again?
+	private bool Gameover = false;
 
 	//Items
 	public GameObject[] active_inactive;	//list of items we can spawn
@@ -21,32 +19,38 @@ public class BoxSpawner : MonoBehaviour {
 	public Transform pickup_position;		//where the box will open and show the item
 	public float probability = 0.3f; 		//chance of getting an unwanted item
 	private PickupItem m_spawnItem;			//object script of the current item
-
+	private GameObject spawned_item;
 
 	void OnEnable ()
 	{
 		msManager.StartListening ("SpawnBox", SpawnBox);
-		msManager.StartListening ("Grab", Grab);
+		//msManager.StartListening ("Grab", Grab);
 		msManager.StartListening ("ItemSpawned", ItemSpawned);
 		msManager.StartListening("DestroyBox", DestroyBox);
+		msManager.StartListening("DestroyItem", DestroyItem);
+		msManager.StartListening("LevelComplete", LevelComplete);
 	}
 
 
 	void onDisable ()
 	{
 		msManager.StopListening ("SpawnBox", SpawnBox);
-		msManager.StopListening ("Grab", Grab);
+		//msManager.StopListening ("Grab", Grab);
 		msManager.StopListening ("ItemSpawned", ItemSpawned);
 		msManager.StopListening ("DestroyBox", DestroyBox);
+		msManager.StopListening ("DestroyItem", DestroyItem);
+		msManager.StopListening("LevelComplete", LevelComplete);
 	}
 
 	public void SpawnBox()
 	{
-        SpawnBoxRoutine();
+		if (Gameover == false)
+        	SpawnBoxRoutine();
     }
 
-    public void Grab()
+	public void LevelComplete()
     {
+		Gameover = true;
     }
 
 
@@ -54,7 +58,7 @@ public class BoxSpawner : MonoBehaviour {
     // Clone a new surprise box
     public void SpawnBoxRoutine () 
 	{
-		
+
 		spawn_point = GameObject.Find("SpawnPoint").transform;
 
 		spawned_box = Instantiate 
@@ -87,7 +91,7 @@ public class BoxSpawner : MonoBehaviour {
 			n = 1;
 		} 
 
-		GameObject spawned_item = Instantiate 
+		spawned_item = Instantiate 
 			(
 				active_inactive[n],
 				pickup_position.transform
@@ -112,6 +116,11 @@ public class BoxSpawner : MonoBehaviour {
 //		Destroy(item, 0.2f);
 	}
 
+
+	void DestroyItem(){
+		DestroyObject (spawned_item);
+	}
+
 	void DestroyBox()
 	{
 		//TDB this would be better if we can check for the previous box before we start a new one 
@@ -121,13 +130,5 @@ public class BoxSpawner : MonoBehaviour {
 		//startanother - the previous should be destroyed by now
 		msManager.TriggerEvent ("SpawnBox");
 	}
-    void Update () 
-	{
-		//if (spawned_item != null)
-		//spawned_item.transform.parent = SurpriseBox.transform; //boxTransform);
-		//Debug.LogError (spawned_box.ToString ());
-			//	
-	}
-
 
 }

@@ -11,7 +11,6 @@ public class RayTap : MonoBehaviour {
 	RaycastHit hitInfo = new RaycastHit();
 	NavMeshAgent agent;
 
-
 	//for the run animation times
 	Vector2 smoothDeltaPosition = Vector2.zero;
 	Vector2 velocity = Vector2.zero;
@@ -22,7 +21,8 @@ public class RayTap : MonoBehaviour {
 
 	void Start() {
 		agent = GetComponent<NavMeshAgent>();
-
+		// Don’t update position automatically
+		//agent.updatePosition = false;
 	}
 
 	private void OnEnable()
@@ -44,14 +44,12 @@ public class RayTap : MonoBehaviour {
 	private void MovePlayerAt(Vector2 position)
 	{
 		Ray ray = Camera.main.ScreenPointToRay (position);
-		//check raycast and if there is an navmeshagent and if the agent is not moving
-		if (Physics.Raycast (ray.origin, ray.direction, out hitInfo) && agent != null && agent.velocity[0] == 0f)
+
+		if (Physics.Raycast (ray.origin, ray.direction, out hitInfo) && agent != null)
 		{
 			//test for ground level
 			if (hitInfo.point [1] <= 3.0f) {
 				agent.destination = hitInfo.point;
-
-				print (agent.velocity);
 			}
 		}
 	}
@@ -70,9 +68,10 @@ public class RayTap : MonoBehaviour {
 
 		if (agent != null) 
 		{
-			
+
 		 Vector3 worldDeltaPosition = agent.destination - transform.position;
 		
+		//print ("agent.nextPosition: " + agent.destination.ToString ()+transform.position.ToString());
 		// Map 'worldDeltaPosition' to local space
 		float dx = Vector3.Dot (transform.right, worldDeltaPosition);
 		float dy = Vector3.Dot (transform.forward, worldDeltaPosition);
@@ -82,7 +81,7 @@ public class RayTap : MonoBehaviour {
 		float smooth = Mathf.Min(1.0f, Time.deltaTime/0.15f);
 		smoothDeltaPosition = Vector2.Lerp (smoothDeltaPosition, deltaPosition, smooth);
 
-			// Update velocity if time advances 	///TBD maybe this is the same as agent.velocity? 
+		// Update velocity if time advances
 		if (Time.deltaTime > 1e-5f)
 			velocity = smoothDeltaPosition / Time.deltaTime;
 			//check to see if the animation vectorX is a number

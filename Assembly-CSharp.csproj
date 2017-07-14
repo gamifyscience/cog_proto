@@ -63,17 +63,10 @@
      <Compile Include="Assets\Fabric\Runtime\Internal\IOSImpl.cs" />
      <Compile Include="Assets\Fabric\Runtime\Internal\Impl.cs" />
      <Compile Include="Assets\Fabric\ThirdParty\MiniJSON.cs" />
+     <Compile Include="Assets\GoToDrone.cs" />
      <Compile Include="Assets\Scripts\AnswerCustom.cs" />
      <Compile Include="Assets\Scripts\MoveTo.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\Clock4Digits.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\Clock6Digits.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\ContainerDisplay7Seg.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\Display2Point.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\Display7Seg.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\SetCurrentTime4Digits.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\SetCurrentTime6Digits.cs" />
-     <Compile Include="Assets\Scripts\UI\7SegScoreboard\SetTimerCountUp.cs" />
      <Compile Include="Assets\Scripts\UI\CountSortManager.cs" />
      <Compile Include="Assets\Scripts\UI\DigitTimer.cs" />
      <Compile Include="Assets\Scripts\UI\HigherLowerButton.cs" />
@@ -177,13 +170,16 @@
      <Compile Include="Assets\Scripts\drone\RealCameraSwitch.cs" />
      <Compile Include="Assets\Scripts\drone\WebCamPhone.cs" />
      <Compile Include="Assets\Scripts\drone\hidePanel.cs" />
-     <Compile Include="Assets\Scripts\drone\hitthis.cs" />
      <Compile Include="Assets\Scripts\gonogo\Avatar.cs" />
      <Compile Include="Assets\Scripts\gonogo\BoxSpawner.cs" />
      <Compile Include="Assets\Scripts\gonogo\ClawClick.cs" />
+     <Compile Include="Assets\Scripts\gonogo\ErrorFeedback.cs" />
+     <Compile Include="Assets\Scripts\gonogo\MoveAnimation.cs" />
+     <Compile Include="Assets\Scripts\gonogo\MoveBelt.cs" />
      <Compile Include="Assets\Scripts\gonogo\PickupItem.cs" />
      <Compile Include="Assets\Scripts\gonogo\SurpriseBox.cs" />
      <Compile Include="Assets\Scripts\gonogo\aiClawClick.cs" />
+     <Compile Include="Assets\Scripts\gonogo\hitthis.cs" />
      <Compile Include="Assets\Scripts\maze\CollisionDetector.cs" />
      <Compile Include="Assets\Scripts\maze\ControllPerson.cs" />
      <Compile Include="Assets\Scripts\maze\DetectLift.cs" />
@@ -193,20 +189,40 @@
      <Compile Include="Assets\Scripts\maze\RayTap.cs" />
      <Compile Include="Assets\Scripts\maze\SpawnMarker.cs" />
      <None Include="Assets\Images\NewImageEffectShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font White DB.shader" />
      <None Include="Assets\Fabric\NOTICE.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font DB.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font.shader" />
      <None Include="Assets\Materials\Shaders\SciFiHologramShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTint.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTintPre.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\ExpandFillShaderPre.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\NOTICE.txt" />
      <None Include="Assets\gameobjects\Textures\Shaders\MappedTransition.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\Font White.shader" />
      <None Include="Assets\Plugins\Android\crashlytics-wrapper\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitShaderPre.shader" />
      <None Include="Assets\Plugins\Android\fabric-init\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\RadialFillShaderPre.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\VerticalFillShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\HorizontalFillShaderPre.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\EBTCanvasClearMask.shader" />
      <None Include="Assets\Plugins\Android\crashlytics\THIRDPARTYLICENSE.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\RadialFillShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitShader.shader" />
      <None Include="Assets\Plugins\Android\answers\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\fabric\NOTICE.txt" />
+     <None Include="Assets\Standard Assets\Energy Bar Tookit\Scripts\Sources\How To Build.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\ExpandFillShader.shader" />
      <None Include="Assets\Plugins\Android\fabric\Template-AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\VerticalFillShaderPre.shader" />
      <None Include="Assets\gameobjects\Textures\Shaders\SciFiHologramShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\HorizontalFillShader.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTintPre DB.shader" />
+     <None Include="Assets\Plugins\Energy Bar Toolkit\Resources\Shaders\UnlitTransparentTint DB.shader" />
      <None Include="Assets\Plugins\Android\fabric\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\beta\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\crashlytics\AndroidManifest.xml" />
@@ -243,6 +259,12 @@
  </Reference>
  <Reference Include="TUIOsharp">
  <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Scripts/UI/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll</HintPath>
+ </Reference>
+ <Reference Include="Mad2D">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Energy Bar Tookit/Scripts/Mad2D.dll</HintPath>
+ </Reference>
+ <Reference Include="MadCommons">
+ <HintPath>/Volumes/MacMini_II/Projects/cog_proto1/Assets/Standard Assets/Energy Bar Tookit/Scripts/MadCommons.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

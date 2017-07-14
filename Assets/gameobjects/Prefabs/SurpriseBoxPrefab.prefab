@@ -498,8 +498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnedBox_a: {fileID: 9525414}
-  Conveyor: {fileID: 139368, guid: 6dcf276a5c2d64635a5445b8fa5217b5, type: 2}
-  Conveyor_a: {fileID: 9513120, guid: 6dcf276a5c2d64635a5445b8fa5217b5, type: 2}
   active_inactive:
   - {fileID: 1522532046576098, guid: c2f7cc1bfeaf14c8aab12fd36077856b, type: 2}
   - {fileID: 1688172812352676, guid: 762940e073c094575b7679d96faaa520, type: 2}
@@ -509,7 +507,7 @@ MonoBehaviour:
   m_spawner: {fileID: 0}
   spawned_item: {fileID: 0}
   move_time: 0.4
-  wait_time: 1
+  wait_time: 1.5
   speed: 0.5
 --- !u!137 &13787768
 SkinnedMeshRenderer:

@@ -2892,17 +2892,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc910bffb88a6c4498505bc81aa143b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 31323a3334
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  text: 12:34
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &114000010609969702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2915,16 +2907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 0
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &114000010685779480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2936,17 +2920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b017ce87b3b34a4ab3a1f6b284800ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 312e322e332e342e
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  text: 1.2.3.4.
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &114000010905186292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2958,16 +2934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad4ebdc60b76a459cea6a92f9107c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
   aFlag: 0
   bFlag: 0
   cFlag: 0
@@ -2987,16 +2955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad4ebdc60b76a459cea6a92f9107c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
   aFlag: 0
   bFlag: 0
   cFlag: 0
@@ -3016,16 +2976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad4ebdc60b76a459cea6a92f9107c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
   aFlag: 0
   bFlag: 0
   cFlag: 0
@@ -3045,16 +2997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad4ebdc60b76a459cea6a92f9107c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  offColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  onColor: {r: 1, g: 0, b: 0, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
   aFlag: 0
   bFlag: 0
   cFlag: 0
@@ -3074,3 +3018,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ae59b1f02ee4695b23cb5036f74a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxTime: 0

@@ -10,6 +10,9 @@ TagManager:
   - Drone
   - Panel
   - realcam
+  - effects
+  - PortalView
+  - TargetCube
   layers:
   - Default
   - TransparentFX

@@ -29,10 +29,10 @@ public class DigitTimer : MonoBehaviour {
 		GetComponent<Clock4Digits>().text = text;
 	}
 		
-	public float RecordTime()
+	public void RecordTime()
 	{
 		timer.stopTimer ();
-		return Time.time;
+		print("Stoptime " + Time.time);
 	}
 
 

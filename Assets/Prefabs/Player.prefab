@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7fd33c57d694994b0ab9f33fcdcbea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 46756c6c73637265656e204020506c6179657243616d657261
+  Name: Fullscreen @ PlayerCamera
   type: 0
   _camera: {fileID: 2055130}
 --- !u!114 &114767787666598218

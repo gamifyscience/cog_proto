@@ -5,34 +5,34 @@ using UnityEngine.EventSystems;
 
 public class Avatar : MonoBehaviour {
 
-	public GameObject BluBunnyGrab;
-	public Animator BluBunny_a;
+	public GameObject AvatarGrab;
+	public Animator Avatar_a;
 
 	// Use this for initialization
 	void Start () {
 		msManager.StartListening ("aiGrab", aiGrab);
 		msManager.StartListening ("ResetScore", ResetScore);
 		msManager.StartListening ("ItemSpawned", ItemSpawned);
-		BluBunny_a = GetComponent<Animator>();
+		Avatar_a = GetComponent<Animator>();
 
 	}
 
 
 	void aiGrab()
 	{
-		BluBunny_a.SetTrigger("Grab"); 
+		Avatar_a.SetTrigger("Grab"); 
 
 	}
 
 	void ItemSpawned()
 	{
-		BluBunny_a.SetTrigger("GrabReady");
+		Avatar_a.SetTrigger("GrabReady");
 
 	}
 
 	void ResetScore()
 	{
-		BluBunny_a.SetTrigger("Cry");
+		Avatar_a.SetTrigger("Cry");
 	}
 
 	// Update is called once per frame

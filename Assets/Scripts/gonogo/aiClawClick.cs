@@ -5,24 +5,29 @@ public class aiClawClick : MonoBehaviour {
 
 	public GameObject aiClaw;
 	public Animator aiClaw_a;
-	//public Animation Claw_anim;
+
 
 	// Use this for initialization
 	void OnEnable () {
 		msManager.StartListening ("aiGrab", aiGrab);
+		msManager.StartListening ("aiPass", aiPass);
 	}
 
-	void Awake ()
-	{
-		aiClaw = GameObject.Find("Claw_Model");
-
-		aiClaw_a = GetComponent<Animator>();
-		//Claw_a.SetTrigger("Grab"); 
+	void OnDisable () {
+		msManager.StopListening ("aiGrab", aiGrab);
+		msManager.StopListening ("aiPass", aiPass);
 	}
 
 	public void aiGrab()
 	{
+		//animate the grab
 		aiClaw_a.SetTrigger("Grab");
-
 	}
+
+	void aiPass ()
+	{
+		//animate the grab
+		aiClaw_a.SetTrigger("Grab");
+	}
+
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
-using Fabric.Answers;
 
 public class DetectLift : MonoBehaviour {
 
@@ -11,7 +10,7 @@ public class DetectLift : MonoBehaviour {
 	public Animator LiftUp;
 	private bool PlayerReady;
 	public GameObject digitTimer;
-	float RoundTime;
+
 
 
 	// Use this for initialization
@@ -57,8 +56,8 @@ public class DetectLift : MonoBehaviour {
 	void PlayerExit ()
 	{
 		//Tell the clock to stop and record time
-		RoundTime = digitTimer.GetComponent<DigitTimer>().RecordTime ();
-		AnswerCustom.LogMazeEscapeInterval ("MorrisMazeTime", "Time to Find Platform", RoundTime);
+		digitTimer.GetComponent<DigitTimer>().RecordTime ();
+
 		//animate the exit
 		LiftUp.SetTrigger("Up");
 		//resetplayer
